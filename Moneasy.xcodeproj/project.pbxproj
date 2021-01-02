@@ -20,7 +20,9 @@
 		04739C4A25A0B47C00FE200A /* LoginProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04739C4925A0B47C00FE200A /* LoginProtocol.swift */; };
 		04739C4D25A0B52700FE200A /* LoginWithEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04739C4C25A0B52700FE200A /* LoginWithEmail.swift */; };
 		04739C5625A0B5FC00FE200A /* LoginWithEmailError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04739C5525A0B5FC00FE200A /* LoginWithEmailError.swift */; };
-		04739C5A25A0E68600FE200A /* FirebaseAuthErrorCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04739C5925A0E68600FE200A /* FirebaseAuthErrorCode.swift */; };
+		04739C6025A0F31E00FE200A /* BalanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04739C5F25A0F31E00FE200A /* BalanceViewController.swift */; };
+		04739C6425A0F3AA00FE200A /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04739C6325A0F3AA00FE200A /* AuthManager.swift */; };
+		04739C6725A1056900FE200A /* FirebaseSources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04739C6625A1056900FE200A /* FirebaseSources.swift */; };
 		049CFEB925A0A4B800CBE271 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CFEB825A0A4B800CBE271 /* Coordinator.swift */; };
 		049CFEBD25A0A4E100CBE271 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CFEBC25A0A4E100CBE271 /* MainCoordinator.swift */; };
 		4FBD05628063E37DBAF4D3BA /* Pods_Moneasy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC342695EFB7675EC82002A0 /* Pods_Moneasy.framework */; };
@@ -43,7 +45,9 @@
 		04739C4925A0B47C00FE200A /* LoginProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProtocol.swift; sourceTree = "<group>"; };
 		04739C4C25A0B52700FE200A /* LoginWithEmail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWithEmail.swift; sourceTree = "<group>"; };
 		04739C5525A0B5FC00FE200A /* LoginWithEmailError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWithEmailError.swift; sourceTree = "<group>"; };
-		04739C5925A0E68600FE200A /* FirebaseAuthErrorCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthErrorCode.swift; sourceTree = "<group>"; };
+		04739C5F25A0F31E00FE200A /* BalanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceViewController.swift; sourceTree = "<group>"; };
+		04739C6325A0F3AA00FE200A /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		04739C6625A1056900FE200A /* FirebaseSources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseSources.swift; sourceTree = "<group>"; };
 		049CFEB825A0A4B800CBE271 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		049CFEBC25A0A4E100CBE271 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		08490499B9DC448B4DE92892 /* Pods-Moneasy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moneasy.release.xcconfig"; path = "Target Support Files/Pods-Moneasy/Pods-Moneasy.release.xcconfig"; sourceTree = "<group>"; };
@@ -103,6 +107,7 @@
 				04739C4F25A0B5E400FE200A /* ErrorHandling */,
 				046CDC2925A0B1E40032354D /* CustomComponents */,
 				046CDC1D25A0A7350032354D /* ViewCodable.swift */,
+				04739C6625A1056900FE200A /* FirebaseSources.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -127,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				04739C4825A0B46F00FE200A /* Login */,
+				04739C6225A0F39700FE200A /* Authentication */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -143,18 +149,33 @@
 		04739C4F25A0B5E400FE200A /* ErrorHandling */ = {
 			isa = PBXGroup;
 			children = (
-				04739C5825A0E67300FE200A /* Firebase */,
 				04739C5525A0B5FC00FE200A /* LoginWithEmailError.swift */,
 			);
 			path = ErrorHandling;
 			sourceTree = "<group>";
 		};
-		04739C5825A0E67300FE200A /* Firebase */ = {
+		04739C5D25A0F2F800FE200A /* Balance */ = {
 			isa = PBXGroup;
 			children = (
-				04739C5925A0E68600FE200A /* FirebaseAuthErrorCode.swift */,
+				04739C5E25A0F30B00FE200A /* View */,
 			);
-			path = Firebase;
+			path = Balance;
+			sourceTree = "<group>";
+		};
+		04739C5E25A0F30B00FE200A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				04739C5F25A0F31E00FE200A /* BalanceViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		04739C6225A0F39700FE200A /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				04739C6325A0F3AA00FE200A /* AuthManager.swift */,
+			);
+			path = Authentication;
 			sourceTree = "<group>";
 		};
 		049CFEB725A0A4A600CBE271 /* Coordinator */ = {
@@ -189,6 +210,7 @@
 			children = (
 				04A2786825A0A4160098DA71 /* LaunchScreen */,
 				04A2786925A0A4230098DA71 /* Login */,
+				04739C5D25A0F2F800FE200A /* Balance */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -363,8 +385,10 @@
 				046CDC1925A0A7190032354D /* LoginView.swift in Sources */,
 				049CFEB925A0A4B800CBE271 /* Coordinator.swift in Sources */,
 				0467AA5825A0A0A40076FCAE /* LoginViewController.swift in Sources */,
-				04739C5A25A0E68600FE200A /* FirebaseAuthErrorCode.swift in Sources */,
+				04739C6425A0F3AA00FE200A /* AuthManager.swift in Sources */,
+				04739C6725A1056900FE200A /* FirebaseSources.swift in Sources */,
 				0467AA5425A0A0A40076FCAE /* AppDelegate.swift in Sources */,
+				04739C6025A0F31E00FE200A /* BalanceViewController.swift in Sources */,
 				04739C4D25A0B52700FE200A /* LoginWithEmail.swift in Sources */,
 				046CDC2325A0ABAB0032354D /* LoginViewModel.swift in Sources */,
 				046CDC1E25A0A7350032354D /* ViewCodable.swift in Sources */,

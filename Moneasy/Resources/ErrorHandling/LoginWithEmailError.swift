@@ -8,6 +8,7 @@
 import Foundation
 
 enum LoginWithEmailError: Error {
+    case invalidEmail
     case emptyEmail
     case emptyPassword
     case wrongPassword
@@ -21,6 +22,8 @@ enum LoginWithEmailError: Error {
 extension LoginWithEmailError: LocalizedError {
     var errorDescription: String? {
         switch self {
+        case .invalidEmail:
+            return "Insira um e-mail válido."
         case .emptyEmail:
             return "Insira um e-mail."
         case .emptyPassword:

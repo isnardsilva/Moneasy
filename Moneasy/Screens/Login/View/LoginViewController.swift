@@ -77,7 +77,7 @@ extension LoginViewController {
 // MARK: - Handle Login Errors and Successes
 extension LoginViewController {
     private func didLoginSuccess() {
-        print("Next Screen")
+        coordinator?.navigateToBalance()
     }
     
     private func didLoginError(error: Error) {

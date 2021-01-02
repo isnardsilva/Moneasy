@@ -20,7 +20,14 @@ final class MainCoordinator: Coordinator {
     
     // MARK: - Start Method
     func start() {
-        navigateToLogin()
+        // Check if is authenticated
+        AuthManager().checkIsAuthenticated(completionHandler: { [weak self] isAuthenticated in
+            if isAuthenticated {
+                self?.navigateToBalance()
+            } else {
+                self?.navigateToLogin()
+            }
+        })
     }
 }
 
@@ -36,6 +43,19 @@ extension MainCoordinator {
             navigationController.pushViewController(loginVC, animated: true)
         } else {
             navigationController.viewControllers.insert(loginVC, at: 0)
+            navigationController.popToRootViewController(animated: false)
+        }
+    }
+    
+    func navigateToBalance() {
+        let balanceVC = BalanceViewController()
+        balanceVC.coordinator = self
+        
+        // Set new root view controller
+        if navigationController.viewControllers.isEmpty {
+            navigationController.pushViewController(balanceVC, animated: true)
+        } else {
+            navigationController.viewControllers.insert(balanceVC, at: 0)
             navigationController.popToRootViewController(animated: false)
         }
     }

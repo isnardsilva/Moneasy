@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import Firebase
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -27,9 +26,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Setup Window
         self.window = UIWindow(windowScene: windowScene)
         self.window?.rootViewController = navigationController
-        
-        // Initialize Firebase
-        FirebaseApp.configure()
         
         // Start coordinator and show first screen
         self.coordinator?.start()

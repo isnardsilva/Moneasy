@@ -48,7 +48,6 @@ extension LoginWithEmail: LoginProtocol {
         }
         
         Auth.auth().signIn(withEmail: email, password: password, completion: { _, error in
-            
             if let detectedError = error {
                 completionHandler(.failure(self.handleLoginErrors(detectedError)))
                 return
@@ -70,6 +69,8 @@ extension LoginWithEmail {
             return .wrongPassword
         case FirebaseAuthErrorCode.userNotFound.rawValue:
             return .userNotFound
+        case FirebaseAuthErrorCode.invalidEmail.rawValue:
+            return .invalidEmail
         case FirebaseAuthErrorCode.offline.rawValue:
             return .offline
         default:
