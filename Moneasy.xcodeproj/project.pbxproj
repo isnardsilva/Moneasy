@@ -16,6 +16,7 @@
 		046CDC1E25A0A7350032354D /* ViewCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046CDC1D25A0A7350032354D /* ViewCodable.swift */; };
 		046CDC2325A0ABAB0032354D /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046CDC2225A0ABAB0032354D /* LoginViewModel.swift */; };
 		046CDC2725A0B0EA0032354D /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046CDC2625A0B0EA0032354D /* AlertManager.swift */; };
+		046CDC2C25A0B3870032354D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 046CDC2B25A0B3870032354D /* GoogleService-Info.plist */; };
 		049CFEB925A0A4B800CBE271 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CFEB825A0A4B800CBE271 /* Coordinator.swift */; };
 		049CFEBD25A0A4E100CBE271 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CFEBC25A0A4E100CBE271 /* MainCoordinator.swift */; };
 		4FBD05628063E37DBAF4D3BA /* Pods_Moneasy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC342695EFB7675EC82002A0 /* Pods_Moneasy.framework */; };
@@ -34,6 +35,7 @@
 		046CDC1D25A0A7350032354D /* ViewCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCodable.swift; sourceTree = "<group>"; };
 		046CDC2225A0ABAB0032354D /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		046CDC2625A0B0EA0032354D /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
+		046CDC2B25A0B3870032354D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		049CFEB825A0A4B800CBE271 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		049CFEBC25A0A4E100CBE271 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		08490499B9DC448B4DE92892 /* Pods-Moneasy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moneasy.release.xcconfig"; path = "Target Support Files/Pods-Moneasy/Pods-Moneasy.release.xcconfig"; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				046CDC1C25A0A7230032354D /* Resources */,
 				0467AA5C25A0A0A60076FCAE /* Assets.xcassets */,
 				0467AA6125A0A0A60076FCAE /* Info.plist */,
+				046CDC2B25A0B3870032354D /* GoogleService-Info.plist */,
 			);
 			path = Moneasy;
 			sourceTree = "<group>";
@@ -192,6 +195,7 @@
 				0467AA4D25A0A0A40076FCAE /* Frameworks */,
 				0467AA4E25A0A0A40076FCAE /* Resources */,
 				04A2786225A0A2B60098DA71 /* Swift Lint */,
+				DD85871412C849ECDCBD3934 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -241,6 +245,7 @@
 			files = (
 				0467AA6025A0A0A60076FCAE /* LaunchScreen.storyboard in Resources */,
 				0467AA5D25A0A0A60076FCAE /* Assets.xcassets in Resources */,
+				046CDC2C25A0B3870032354D /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +269,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
+		DD85871412C849ECDCBD3934 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Moneasy/Pods-Moneasy-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Moneasy/Pods-Moneasy-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Moneasy/Pods-Moneasy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 		FFB11515A33F6285322C1C76 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

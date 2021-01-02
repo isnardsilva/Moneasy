@@ -5,4 +5,5 @@ use_frameworks!
 target 'Moneasy' do
   # Pods for Moneasy
   pod 'SwiftLint'
+  pod 'Firebase/Auth'
 end
