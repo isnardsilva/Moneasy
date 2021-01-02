@@ -13,6 +13,7 @@
 		0467AA5B25A0A0A40076FCAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0467AA5925A0A0A40076FCAE /* Main.storyboard */; };
 		0467AA5D25A0A0A60076FCAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0467AA5C25A0A0A60076FCAE /* Assets.xcassets */; };
 		0467AA6025A0A0A60076FCAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0467AA5E25A0A0A60076FCAE /* LaunchScreen.storyboard */; };
+		4FBD05628063E37DBAF4D3BA /* Pods_Moneasy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC342695EFB7675EC82002A0 /* Pods_Moneasy.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,9 @@
 		0467AA5F25A0A0A60076FCAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0467AA6125A0A0A60076FCAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0467AA6825A0A0B70076FCAE /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		08490499B9DC448B4DE92892 /* Pods-Moneasy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moneasy.release.xcconfig"; path = "Target Support Files/Pods-Moneasy/Pods-Moneasy.release.xcconfig"; sourceTree = "<group>"; };
+		9061F7800CCB7CB9DBD4F22E /* Pods-Moneasy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moneasy.debug.xcconfig"; path = "Target Support Files/Pods-Moneasy/Pods-Moneasy.debug.xcconfig"; sourceTree = "<group>"; };
+		DC342695EFB7675EC82002A0 /* Pods_Moneasy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Moneasy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FBD05628063E37DBAF4D3BA /* Pods_Moneasy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +49,8 @@
 				0467AA6825A0A0B70076FCAE /* README.md */,
 				0467AA5225A0A0A40076FCAE /* Moneasy */,
 				0467AA5125A0A0A40076FCAE /* Products */,
+				D6BA226130BDDDA1BF509669 /* Pods */,
+				9ECD51FCB1B46D1C8ACB8C02 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,6 +76,23 @@
 			path = Moneasy;
 			sourceTree = "<group>";
 		};
+		9ECD51FCB1B46D1C8ACB8C02 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DC342695EFB7675EC82002A0 /* Pods_Moneasy.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D6BA226130BDDDA1BF509669 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9061F7800CCB7CB9DBD4F22E /* Pods-Moneasy.debug.xcconfig */,
+				08490499B9DC448B4DE92892 /* Pods-Moneasy.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -76,9 +100,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0467AA6425A0A0A60076FCAE /* Build configuration list for PBXNativeTarget "Moneasy" */;
 			buildPhases = (
+				FFB11515A33F6285322C1C76 /* [CP] Check Pods Manifest.lock */,
 				0467AA4C25A0A0A40076FCAE /* Sources */,
 				0467AA4D25A0A0A40076FCAE /* Frameworks */,
 				0467AA4E25A0A0A40076FCAE /* Resources */,
+				04A2786225A0A2B60098DA71 /* Swift Lint */,
 			);
 			buildRules = (
 			);
@@ -133,6 +159,49 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		04A2786225A0A2B60098DA71 /* Swift Lint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Swift Lint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
+		FFB11515A33F6285322C1C76 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Moneasy-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0467AA4C25A0A0A40076FCAE /* Sources */ = {
@@ -285,6 +354,7 @@
 		};
 		0467AA6525A0A0A60076FCAE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9061F7800CCB7CB9DBD4F22E /* Pods-Moneasy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -305,6 +375,7 @@
 		};
 		0467AA6625A0A0A60076FCAE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 08490499B9DC448B4DE92892 /* Pods-Moneasy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
