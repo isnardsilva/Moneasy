@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		0467AA5425A0A0A40076FCAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0467AA5325A0A0A40076FCAE /* AppDelegate.swift */; };
 		0467AA5625A0A0A40076FCAE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0467AA5525A0A0A40076FCAE /* SceneDelegate.swift */; };
-		0467AA5825A0A0A40076FCAE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0467AA5725A0A0A40076FCAE /* ViewController.swift */; };
+		0467AA5825A0A0A40076FCAE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0467AA5725A0A0A40076FCAE /* LoginViewController.swift */; };
 		0467AA5B25A0A0A40076FCAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0467AA5925A0A0A40076FCAE /* Main.storyboard */; };
 		0467AA5D25A0A0A60076FCAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0467AA5C25A0A0A60076FCAE /* Assets.xcassets */; };
 		0467AA6025A0A0A60076FCAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0467AA5E25A0A0A60076FCAE /* LaunchScreen.storyboard */; };
@@ -20,7 +20,7 @@
 		0467AA5025A0A0A40076FCAE /* Moneasy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moneasy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0467AA5325A0A0A40076FCAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0467AA5525A0A0A40076FCAE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0467AA5725A0A0A40076FCAE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0467AA5725A0A0A40076FCAE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		0467AA5A25A0A0A40076FCAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0467AA5C25A0A0A60076FCAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0467AA5F25A0A0A60076FCAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -65,15 +65,47 @@
 		0467AA5225A0A0A40076FCAE /* Moneasy */ = {
 			isa = PBXGroup;
 			children = (
-				0467AA5325A0A0A40076FCAE /* AppDelegate.swift */,
-				0467AA5525A0A0A40076FCAE /* SceneDelegate.swift */,
-				0467AA5725A0A0A40076FCAE /* ViewController.swift */,
+				04A2786625A0A3F80098DA71 /* AppDelegate */,
+				04A2786725A0A4050098DA71 /* Screens */,
 				0467AA5925A0A0A40076FCAE /* Main.storyboard */,
 				0467AA5C25A0A0A60076FCAE /* Assets.xcassets */,
-				0467AA5E25A0A0A60076FCAE /* LaunchScreen.storyboard */,
 				0467AA6125A0A0A60076FCAE /* Info.plist */,
 			);
 			path = Moneasy;
+			sourceTree = "<group>";
+		};
+		04A2786625A0A3F80098DA71 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				0467AA5325A0A0A40076FCAE /* AppDelegate.swift */,
+				0467AA5525A0A0A40076FCAE /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		04A2786725A0A4050098DA71 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				04A2786825A0A4160098DA71 /* LaunchScreen */,
+				04A2786925A0A4230098DA71 /* Login */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		04A2786825A0A4160098DA71 /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				0467AA5E25A0A0A60076FCAE /* LaunchScreen.storyboard */,
+			);
+			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
+		04A2786925A0A4230098DA71 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				0467AA5725A0A0A40076FCAE /* LoginViewController.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		9ECD51FCB1B46D1C8ACB8C02 /* Frameworks */ = {
@@ -208,7 +240,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0467AA5825A0A0A40076FCAE /* ViewController.swift in Sources */,
+				0467AA5825A0A0A40076FCAE /* LoginViewController.swift in Sources */,
 				0467AA5425A0A0A40076FCAE /* AppDelegate.swift in Sources */,
 				0467AA5625A0A0A40076FCAE /* SceneDelegate.swift in Sources */,
 			);
