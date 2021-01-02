@@ -14,6 +14,7 @@
 		0467AA6025A0A0A60076FCAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0467AA5E25A0A0A60076FCAE /* LaunchScreen.storyboard */; };
 		046CDC1925A0A7190032354D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046CDC1825A0A7190032354D /* LoginView.swift */; };
 		046CDC1E25A0A7350032354D /* ViewCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046CDC1D25A0A7350032354D /* ViewCodable.swift */; };
+		046CDC2325A0ABAB0032354D /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046CDC2225A0ABAB0032354D /* LoginViewModel.swift */; };
 		049CFEB925A0A4B800CBE271 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CFEB825A0A4B800CBE271 /* Coordinator.swift */; };
 		049CFEBD25A0A4E100CBE271 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CFEBC25A0A4E100CBE271 /* MainCoordinator.swift */; };
 		4FBD05628063E37DBAF4D3BA /* Pods_Moneasy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC342695EFB7675EC82002A0 /* Pods_Moneasy.framework */; };
@@ -30,6 +31,7 @@
 		0467AA6825A0A0B70076FCAE /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		046CDC1825A0A7190032354D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		046CDC1D25A0A7350032354D /* ViewCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCodable.swift; sourceTree = "<group>"; };
+		046CDC2225A0ABAB0032354D /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		049CFEB825A0A4B800CBE271 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		049CFEBC25A0A4E100CBE271 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		08490499B9DC448B4DE92892 /* Pods-Moneasy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moneasy.release.xcconfig"; path = "Target Support Files/Pods-Moneasy/Pods-Moneasy.release.xcconfig"; sourceTree = "<group>"; };
@@ -89,6 +91,14 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		046CDC2125A0AB9B0032354D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				046CDC2225A0ABAB0032354D /* LoginViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		049CFEB725A0A4A600CBE271 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +146,7 @@
 		04A2786925A0A4230098DA71 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				046CDC2125A0AB9B0032354D /* ViewModel */,
 				049CFEC025A0A54B00CBE271 /* View */,
 			);
 			path = Login;
@@ -276,6 +287,7 @@
 				049CFEB925A0A4B800CBE271 /* Coordinator.swift in Sources */,
 				0467AA5825A0A0A40076FCAE /* LoginViewController.swift in Sources */,
 				0467AA5425A0A0A40076FCAE /* AppDelegate.swift in Sources */,
+				046CDC2325A0ABAB0032354D /* LoginViewModel.swift in Sources */,
 				046CDC1E25A0A7350032354D /* ViewCodable.swift in Sources */,
 				049CFEBD25A0A4E100CBE271 /* MainCoordinator.swift in Sources */,
 				0467AA5625A0A0A40076FCAE /* SceneDelegate.swift in Sources */,

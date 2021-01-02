@@ -10,6 +10,8 @@ import UIKit
 final class LoginViewController: UIViewController {
     // MARK: - Properties
     private lazy var baseView = LoginView()
+    private let viewModel = LoginViewModel()
+    
     weak var coordinator: MainCoordinator?
     
     
@@ -26,8 +28,24 @@ final class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupActions()
     }
-
-
 }
 
+
+// MARK: - Actions
+extension LoginViewController {
+    private func setupActions() {
+        baseView.signInButton.addTarget(self, action: #selector(signInButtonTouched(_:)), for: .touchUpInside)
+        baseView.signUpButton.addTarget(self, action: #selector(signUpButtonTouched(_:)), for: .touchUpInside)
+    }
+    
+    @objc private func signInButtonTouched(_ sender: UIButton) {
+        print("Entrar")
+    }
+    
+    @objc private func signUpButtonTouched(_ sender: UIButton) {
+        print("Cadastrar-se")
+    }
+}
