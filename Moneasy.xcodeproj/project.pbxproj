@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,10 @@
 		046CDC2325A0ABAB0032354D /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046CDC2225A0ABAB0032354D /* LoginViewModel.swift */; };
 		046CDC2725A0B0EA0032354D /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046CDC2625A0B0EA0032354D /* AlertManager.swift */; };
 		046CDC2C25A0B3870032354D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 046CDC2B25A0B3870032354D /* GoogleService-Info.plist */; };
+		04739C4A25A0B47C00FE200A /* LoginProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04739C4925A0B47C00FE200A /* LoginProtocol.swift */; };
+		04739C4D25A0B52700FE200A /* LoginWithEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04739C4C25A0B52700FE200A /* LoginWithEmail.swift */; };
+		04739C5625A0B5FC00FE200A /* LoginWithEmailError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04739C5525A0B5FC00FE200A /* LoginWithEmailError.swift */; };
+		04739C5A25A0E68600FE200A /* FirebaseAuthErrorCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04739C5925A0E68600FE200A /* FirebaseAuthErrorCode.swift */; };
 		049CFEB925A0A4B800CBE271 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CFEB825A0A4B800CBE271 /* Coordinator.swift */; };
 		049CFEBD25A0A4E100CBE271 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CFEBC25A0A4E100CBE271 /* MainCoordinator.swift */; };
 		4FBD05628063E37DBAF4D3BA /* Pods_Moneasy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC342695EFB7675EC82002A0 /* Pods_Moneasy.framework */; };
@@ -36,6 +40,10 @@
 		046CDC2225A0ABAB0032354D /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		046CDC2625A0B0EA0032354D /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 		046CDC2B25A0B3870032354D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		04739C4925A0B47C00FE200A /* LoginProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProtocol.swift; sourceTree = "<group>"; };
+		04739C4C25A0B52700FE200A /* LoginWithEmail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWithEmail.swift; sourceTree = "<group>"; };
+		04739C5525A0B5FC00FE200A /* LoginWithEmailError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWithEmailError.swift; sourceTree = "<group>"; };
+		04739C5925A0E68600FE200A /* FirebaseAuthErrorCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthErrorCode.swift; sourceTree = "<group>"; };
 		049CFEB825A0A4B800CBE271 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		049CFEBC25A0A4E100CBE271 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		08490499B9DC448B4DE92892 /* Pods-Moneasy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moneasy.release.xcconfig"; path = "Target Support Files/Pods-Moneasy/Pods-Moneasy.release.xcconfig"; sourceTree = "<group>"; };
@@ -79,6 +87,7 @@
 			children = (
 				04A2786625A0A3F80098DA71 /* AppDelegate */,
 				049CFEB725A0A4A600CBE271 /* Coordinator */,
+				04739C4725A0B45F00FE200A /* Service */,
 				04A2786725A0A4050098DA71 /* Screens */,
 				046CDC1C25A0A7230032354D /* Resources */,
 				0467AA5C25A0A0A60076FCAE /* Assets.xcassets */,
@@ -91,6 +100,7 @@
 		046CDC1C25A0A7230032354D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				04739C4F25A0B5E400FE200A /* ErrorHandling */,
 				046CDC2925A0B1E40032354D /* CustomComponents */,
 				046CDC1D25A0A7350032354D /* ViewCodable.swift */,
 			);
@@ -111,6 +121,40 @@
 				046CDC2625A0B0EA0032354D /* AlertManager.swift */,
 			);
 			path = CustomComponents;
+			sourceTree = "<group>";
+		};
+		04739C4725A0B45F00FE200A /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				04739C4825A0B46F00FE200A /* Login */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		04739C4825A0B46F00FE200A /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				04739C4925A0B47C00FE200A /* LoginProtocol.swift */,
+				04739C4C25A0B52700FE200A /* LoginWithEmail.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		04739C4F25A0B5E400FE200A /* ErrorHandling */ = {
+			isa = PBXGroup;
+			children = (
+				04739C5825A0E67300FE200A /* Firebase */,
+				04739C5525A0B5FC00FE200A /* LoginWithEmailError.swift */,
+			);
+			path = ErrorHandling;
+			sourceTree = "<group>";
+		};
+		04739C5825A0E67300FE200A /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				04739C5925A0E68600FE200A /* FirebaseAuthErrorCode.swift */,
+			);
+			path = Firebase;
 			sourceTree = "<group>";
 		};
 		049CFEB725A0A4A600CBE271 /* Coordinator */ = {
@@ -319,12 +363,16 @@
 				046CDC1925A0A7190032354D /* LoginView.swift in Sources */,
 				049CFEB925A0A4B800CBE271 /* Coordinator.swift in Sources */,
 				0467AA5825A0A0A40076FCAE /* LoginViewController.swift in Sources */,
+				04739C5A25A0E68600FE200A /* FirebaseAuthErrorCode.swift in Sources */,
 				0467AA5425A0A0A40076FCAE /* AppDelegate.swift in Sources */,
+				04739C4D25A0B52700FE200A /* LoginWithEmail.swift in Sources */,
 				046CDC2325A0ABAB0032354D /* LoginViewModel.swift in Sources */,
 				046CDC1E25A0A7350032354D /* ViewCodable.swift in Sources */,
 				049CFEBD25A0A4E100CBE271 /* MainCoordinator.swift in Sources */,
+				04739C4A25A0B47C00FE200A /* LoginProtocol.swift in Sources */,
 				0467AA5625A0A0A40076FCAE /* SceneDelegate.swift in Sources */,
 				046CDC2725A0B0EA0032354D /* AlertManager.swift in Sources */,
+				04739C5625A0B5FC00FE200A /* LoginWithEmailError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

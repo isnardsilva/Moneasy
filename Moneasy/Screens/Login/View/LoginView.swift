@@ -30,6 +30,7 @@ final class LoginView: UIView {
         let textField = UITextField()
         textField.placeholder = "E-mail"
         textField.autocapitalizationType = .none
+        textField.autocorrectionType = .yes
         textField.keyboardType = .emailAddress
         textField.borderStyle = .roundedRect
         return textField
