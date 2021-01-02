@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0407CAF725A1688B00D2A8B7 /* BalanceValueHighlightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0407CAF625A1688B00D2A8B7 /* BalanceValueHighlightView.swift */; };
 		040CFB2125A1085F0013BB6A /* LoginWithEmailTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040CFB2025A1085F0013BB6A /* LoginWithEmailTests.swift */; };
 		0467AA5425A0A0A40076FCAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0467AA5325A0A0A40076FCAE /* AppDelegate.swift */; };
 		0467AA5625A0A0A40076FCAE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0467AA5525A0A0A40076FCAE /* SceneDelegate.swift */; };
@@ -26,8 +27,12 @@
 		04739C6725A1056900FE200A /* FirebaseSources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04739C6625A1056900FE200A /* FirebaseSources.swift */; };
 		049CFEB925A0A4B800CBE271 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CFEB825A0A4B800CBE271 /* Coordinator.swift */; };
 		049CFEBD25A0A4E100CBE271 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CFEBC25A0A4E100CBE271 /* MainCoordinator.swift */; };
+		04E2E01225A16CCF00C16733 /* BalanceValueLittleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E2E01125A16CCF00C16733 /* BalanceValueLittleView.swift */; };
 		04E6702F25A1252800E505F5 /* LoadingAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E6702E25A1252800E505F5 /* LoadingAlertViewController.swift */; };
 		04E6703F25A1259A00E505F5 /* LoadingAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E6703E25A1259A00E505F5 /* LoadingAlertView.swift */; };
+		04EB3E2525A12B5F00DA78A0 /* BalanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EB3E2425A12B5F00DA78A0 /* BalanceView.swift */; };
+		04EB3E2925A12C7C00DA78A0 /* Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EB3E2825A12C7C00DA78A0 /* Identifier.swift */; };
+		04EB3E3A25A136DD00DA78A0 /* BalanceHeaderReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EB3E3925A136DD00DA78A0 /* BalanceHeaderReusableView.swift */; };
 		4FBD05628063E37DBAF4D3BA /* Pods_Moneasy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC342695EFB7675EC82002A0 /* Pods_Moneasy.framework */; };
 		AF1152E13A59FBBCDAE4C6A4 /* Pods_MoneasyUnitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2451B9EE87B562FEECD1FB3 /* Pods_MoneasyUnitTests.framework */; };
 /* End PBXBuildFile section */
@@ -43,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0407CAF625A1688B00D2A8B7 /* BalanceValueHighlightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceValueHighlightView.swift; sourceTree = "<group>"; };
 		040CFB2025A1085F0013BB6A /* LoginWithEmailTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWithEmailTests.swift; sourceTree = "<group>"; };
 		0467AA5025A0A0A40076FCAE /* Moneasy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moneasy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0467AA5325A0A0A40076FCAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -67,8 +73,12 @@
 		04739C8525A1083400FE200A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		049CFEB825A0A4B800CBE271 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		049CFEBC25A0A4E100CBE271 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		04E2E01125A16CCF00C16733 /* BalanceValueLittleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceValueLittleView.swift; sourceTree = "<group>"; };
 		04E6702E25A1252800E505F5 /* LoadingAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingAlertViewController.swift; sourceTree = "<group>"; };
 		04E6703E25A1259A00E505F5 /* LoadingAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingAlertView.swift; sourceTree = "<group>"; };
+		04EB3E2425A12B5F00DA78A0 /* BalanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceView.swift; sourceTree = "<group>"; };
+		04EB3E2825A12C7C00DA78A0 /* Identifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifier.swift; sourceTree = "<group>"; };
+		04EB3E3925A136DD00DA78A0 /* BalanceHeaderReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceHeaderReusableView.swift; sourceTree = "<group>"; };
 		08490499B9DC448B4DE92892 /* Pods-Moneasy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moneasy.release.xcconfig"; path = "Target Support Files/Pods-Moneasy/Pods-Moneasy.release.xcconfig"; sourceTree = "<group>"; };
 		1CE1CD30C724D175BBC31998 /* Pods-MoneasyUnitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoneasyUnitTests.debug.xcconfig"; path = "Target Support Files/Pods-MoneasyUnitTests/Pods-MoneasyUnitTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9061F7800CCB7CB9DBD4F22E /* Pods-Moneasy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moneasy.debug.xcconfig"; path = "Target Support Files/Pods-Moneasy/Pods-Moneasy.debug.xcconfig"; sourceTree = "<group>"; };
@@ -97,6 +107,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0407CAF525A1684F00D2A8B7 /* HeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				04EB3E3925A136DD00DA78A0 /* BalanceHeaderReusableView.swift */,
+				0407CAF625A1688B00D2A8B7 /* BalanceValueHighlightView.swift */,
+				04E2E01125A16CCF00C16733 /* BalanceValueLittleView.swift */,
+			);
+			path = HeaderView;
+			sourceTree = "<group>";
+		};
 		0467AA4725A0A0A40076FCAE = {
 			isa = PBXGroup;
 			children = (
@@ -140,6 +160,7 @@
 				046CDC2925A0B1E40032354D /* CustomComponents */,
 				046CDC1D25A0A7350032354D /* ViewCodable.swift */,
 				04739C6625A1056900FE200A /* FirebaseSources.swift */,
+				04EB3E2825A12C7C00DA78A0 /* Identifier.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -198,7 +219,9 @@
 		04739C5E25A0F30B00FE200A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				04EB3E2C25A12FB900DA78A0 /* Cell */,
 				04739C5F25A0F31E00FE200A /* BalanceViewController.swift */,
+				04EB3E2425A12B5F00DA78A0 /* BalanceView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -281,6 +304,14 @@
 				04E6703E25A1259A00E505F5 /* LoadingAlertView.swift */,
 			);
 			path = LoadingAlert;
+			sourceTree = "<group>";
+		};
+		04EB3E2C25A12FB900DA78A0 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				0407CAF525A1684F00D2A8B7 /* HeaderView */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		9ECD51FCB1B46D1C8ACB8C02 /* Frameworks */ = {
@@ -510,6 +541,7 @@
 				04E6702F25A1252800E505F5 /* LoadingAlertViewController.swift in Sources */,
 				046CDC1925A0A7190032354D /* LoginView.swift in Sources */,
 				04E6703F25A1259A00E505F5 /* LoadingAlertView.swift in Sources */,
+				04E2E01225A16CCF00C16733 /* BalanceValueLittleView.swift in Sources */,
 				049CFEB925A0A4B800CBE271 /* Coordinator.swift in Sources */,
 				0467AA5825A0A0A40076FCAE /* LoginViewController.swift in Sources */,
 				04739C6425A0F3AA00FE200A /* AuthManager.swift in Sources */,
@@ -517,13 +549,17 @@
 				0467AA5425A0A0A40076FCAE /* AppDelegate.swift in Sources */,
 				04739C6025A0F31E00FE200A /* BalanceViewController.swift in Sources */,
 				04739C4D25A0B52700FE200A /* LoginWithEmail.swift in Sources */,
+				0407CAF725A1688B00D2A8B7 /* BalanceValueHighlightView.swift in Sources */,
 				046CDC2325A0ABAB0032354D /* LoginViewModel.swift in Sources */,
+				04EB3E2925A12C7C00DA78A0 /* Identifier.swift in Sources */,
 				046CDC1E25A0A7350032354D /* ViewCodable.swift in Sources */,
 				049CFEBD25A0A4E100CBE271 /* MainCoordinator.swift in Sources */,
 				04739C4A25A0B47C00FE200A /* LoginProtocol.swift in Sources */,
 				0467AA5625A0A0A40076FCAE /* SceneDelegate.swift in Sources */,
+				04EB3E2525A12B5F00DA78A0 /* BalanceView.swift in Sources */,
 				046CDC2725A0B0EA0032354D /* AlertManager.swift in Sources */,
 				04739C5625A0B5FC00FE200A /* LoginWithEmailError.swift in Sources */,
+				04EB3E3A25A136DD00DA78A0 /* BalanceHeaderReusableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
