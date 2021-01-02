@@ -7,3 +7,9 @@ target 'Moneasy' do
   pod 'SwiftLint'
   pod 'Firebase/Auth'
 end
+
+target 'MoneasyUnitTests' do
+  inherit! :search_paths
+  # Pods for Moneasy
+  pod 'Firebase/Auth'
+end
