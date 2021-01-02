@@ -49,11 +49,13 @@ final class LoginViewController: UIViewController {
 // MARK: - Actions
 extension LoginViewController {
     private func setupActions() {
-        baseView.signInButton.addTarget(self, action: #selector(signInButtonTouched(_:)), for: .touchUpInside)
+        baseView.signInWithEmailButton.addTarget(self, action: #selector(signInWithEmailButtonTouched(_:)), for: .touchUpInside)
         baseView.signUpButton.addTarget(self, action: #selector(signUpButtonTouched(_:)), for: .touchUpInside)
     }
     
-    @objc private func signInButtonTouched(_ sender: UIButton) {
+    @objc private func signInWithEmailButtonTouched(_ sender: UIButton) {
+        showLoadingAlert()
+        
         guard let typedEmail = baseView.emailTextField.text else {
             print("Error ao tentar pegar o e-mail")
             return
@@ -73,18 +75,32 @@ extension LoginViewController {
     }
 }
 
+// MARK: - Handle Loading Alert
+extension LoginViewController {
+    private func showLoadingAlert() {
+        baseView.loadingAlert = LoadingAlertViewController()
+        if let validLoadingAlert = baseView.loadingAlert {
+            self.present(validLoadingAlert, animated: true, completion: nil)
+        }
+    }
+}
 
 // MARK: - Handle Login Errors and Successes
 extension LoginViewController {
     private func didLoginSuccess() {
-        coordinator?.navigateToBalance()
+        baseView.loadingAlert?.dismiss(animated: true, completion: { [weak self] in
+            self?.coordinator?.navigateToBalance()
+        })
     }
     
     private func didLoginError(error: Error) {
-        let title = "Opa"
-        let message = error.localizedDescription
-
-        let alert = AlertManager().createDefaultAlert(title: title, message: message)
-        self.present(alert, animated: true, completion: nil)
+        baseView.loadingAlert?.dismiss(animated: true, completion: { [weak self] in
+            let title = "Opa"
+            let message = error.localizedDescription
+            
+            let alert = AlertManager().createDefaultAlert(title: title, message: message)
+            self?.present(alert, animated: true, completion: nil)
+        })
+        baseView.loadingAlert = nil
     }
 }

@@ -30,7 +30,7 @@ final class LoginView: UIView {
         let textField = UITextField()
         textField.placeholder = "E-mail"
         textField.autocapitalizationType = .none
-        textField.autocorrectionType = .yes
+        textField.textContentType = .emailAddress
         textField.keyboardType = .emailAddress
         textField.borderStyle = .roundedRect
         return textField
@@ -40,6 +40,7 @@ final class LoginView: UIView {
         let textField = UITextField()
         textField.placeholder = "Senha"
         textField.autocapitalizationType = .none
+        textField.textContentType = .password
         textField.isSecureTextEntry = true
         textField.borderStyle = .roundedRect
         return textField
@@ -55,7 +56,7 @@ final class LoginView: UIView {
     }()
     
     
-    let signInButton: UIButton = {
+    let signInWithEmailButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Entrar", for: .normal)
         return button
@@ -66,6 +67,10 @@ final class LoginView: UIView {
         button.setTitle("Cadastrar-se", for: .normal)
         return button
     }()
+    
+    
+    // Loading Alert
+    var loadingAlert: LoadingAlertViewController?
     
     
     // MARK: - Initialization
@@ -81,7 +86,7 @@ final class LoginView: UIView {
 }
 
 
-// MARK: -
+// MARK: - ViewCodable
 extension LoginView: ViewCodable {
     func setupHierarchy() {
         addSubview(contentStackView)
@@ -93,7 +98,7 @@ extension LoginView: ViewCodable {
         
         // Buttons
         contentStackView.addArrangedSubview(buttonsStackView)
-        buttonsStackView.addArrangedSubview(signInButton)
+        buttonsStackView.addArrangedSubview(signInWithEmailButton)
         buttonsStackView.addArrangedSubview(signUpButton)
     }
     

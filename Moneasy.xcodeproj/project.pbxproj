@@ -26,6 +26,8 @@
 		04739C6725A1056900FE200A /* FirebaseSources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04739C6625A1056900FE200A /* FirebaseSources.swift */; };
 		049CFEB925A0A4B800CBE271 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CFEB825A0A4B800CBE271 /* Coordinator.swift */; };
 		049CFEBD25A0A4E100CBE271 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CFEBC25A0A4E100CBE271 /* MainCoordinator.swift */; };
+		04E6702F25A1252800E505F5 /* LoadingAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E6702E25A1252800E505F5 /* LoadingAlertViewController.swift */; };
+		04E6703F25A1259A00E505F5 /* LoadingAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E6703E25A1259A00E505F5 /* LoadingAlertView.swift */; };
 		4FBD05628063E37DBAF4D3BA /* Pods_Moneasy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC342695EFB7675EC82002A0 /* Pods_Moneasy.framework */; };
 		AF1152E13A59FBBCDAE4C6A4 /* Pods_MoneasyUnitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2451B9EE87B562FEECD1FB3 /* Pods_MoneasyUnitTests.framework */; };
 /* End PBXBuildFile section */
@@ -65,6 +67,8 @@
 		04739C8525A1083400FE200A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		049CFEB825A0A4B800CBE271 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		049CFEBC25A0A4E100CBE271 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		04E6702E25A1252800E505F5 /* LoadingAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingAlertViewController.swift; sourceTree = "<group>"; };
+		04E6703E25A1259A00E505F5 /* LoadingAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingAlertView.swift; sourceTree = "<group>"; };
 		08490499B9DC448B4DE92892 /* Pods-Moneasy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moneasy.release.xcconfig"; path = "Target Support Files/Pods-Moneasy/Pods-Moneasy.release.xcconfig"; sourceTree = "<group>"; };
 		1CE1CD30C724D175BBC31998 /* Pods-MoneasyUnitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoneasyUnitTests.debug.xcconfig"; path = "Target Support Files/Pods-MoneasyUnitTests/Pods-MoneasyUnitTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9061F7800CCB7CB9DBD4F22E /* Pods-Moneasy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moneasy.debug.xcconfig"; path = "Target Support Files/Pods-Moneasy/Pods-Moneasy.debug.xcconfig"; sourceTree = "<group>"; };
@@ -151,6 +155,7 @@
 		046CDC2925A0B1E40032354D /* CustomComponents */ = {
 			isa = PBXGroup;
 			children = (
+				04E6702D25A1251900E505F5 /* LoadingAlert */,
 				046CDC2625A0B0EA0032354D /* AlertManager.swift */,
 			);
 			path = CustomComponents;
@@ -267,6 +272,15 @@
 				049CFEC025A0A54B00CBE271 /* View */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		04E6702D25A1251900E505F5 /* LoadingAlert */ = {
+			isa = PBXGroup;
+			children = (
+				04E6702E25A1252800E505F5 /* LoadingAlertViewController.swift */,
+				04E6703E25A1259A00E505F5 /* LoadingAlertView.swift */,
+			);
+			path = LoadingAlert;
 			sourceTree = "<group>";
 		};
 		9ECD51FCB1B46D1C8ACB8C02 /* Frameworks */ = {
@@ -493,7 +507,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04E6702F25A1252800E505F5 /* LoadingAlertViewController.swift in Sources */,
 				046CDC1925A0A7190032354D /* LoginView.swift in Sources */,
+				04E6703F25A1259A00E505F5 /* LoadingAlertView.swift in Sources */,
 				049CFEB925A0A4B800CBE271 /* Coordinator.swift in Sources */,
 				0467AA5825A0A0A40076FCAE /* LoginViewController.swift in Sources */,
 				04739C6425A0F3AA00FE200A /* AuthManager.swift in Sources */,
