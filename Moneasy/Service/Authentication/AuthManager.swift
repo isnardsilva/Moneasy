@@ -20,12 +20,22 @@ final class AuthManager {
         })
     }
     
+    func getUserUid(completionHandler: @escaping (Result<String, Error>) -> Void) {
+        Auth.auth().addStateDidChangeListener({ _, user in
+            if let validUser = user {
+                completionHandler(.success(validUser.uid))
+            } else {
+                completionHandler(.failure(AuthManagerError.unauthenticatedUser))
+            }
+        })
+    }
+    
     func deleteUserSession(completionHandler: (Error?) -> Void) {
         do {
             try Auth.auth().signOut()
             completionHandler(nil)
         } catch {
-            completionHandler(error)
+            completionHandler(AuthManagerError.signOutFailed)
         }
     }
 }

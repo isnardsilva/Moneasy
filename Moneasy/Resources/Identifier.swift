@@ -16,4 +16,8 @@ enum Identifier {
     enum Color {
         static let balanceHeaderBackground = "balanceHeaderBackground"
     }
+    
+    enum Database {
+        static let transactionsKey = "transactions"
+    }
 }

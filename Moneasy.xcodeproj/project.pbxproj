@@ -35,6 +35,9 @@
 		04EB3E2525A12B5F00DA78A0 /* BalanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EB3E2425A12B5F00DA78A0 /* BalanceView.swift */; };
 		04EB3E2925A12C7C00DA78A0 /* Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EB3E2825A12C7C00DA78A0 /* Identifier.swift */; };
 		04EB3E3A25A136DD00DA78A0 /* BalanceHeaderReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EB3E3925A136DD00DA78A0 /* BalanceHeaderReusableView.swift */; };
+		04FA9F9325A2557E00E82816 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FA9F9225A2557E00E82816 /* Transaction.swift */; };
+		04FA9F9A25A256BF00E82816 /* TransactionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FA9F9925A256BF00E82816 /* TransactionService.swift */; };
+		04FA9FA025A26E5C00E82816 /* AuthManagerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FA9F9F25A26E5C00E82816 /* AuthManagerError.swift */; };
 		4FBD05628063E37DBAF4D3BA /* Pods_Moneasy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC342695EFB7675EC82002A0 /* Pods_Moneasy.framework */; };
 		AF1152E13A59FBBCDAE4C6A4 /* Pods_MoneasyUnitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2451B9EE87B562FEECD1FB3 /* Pods_MoneasyUnitTests.framework */; };
 /* End PBXBuildFile section */
@@ -83,6 +86,9 @@
 		04EB3E2425A12B5F00DA78A0 /* BalanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceView.swift; sourceTree = "<group>"; };
 		04EB3E2825A12C7C00DA78A0 /* Identifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifier.swift; sourceTree = "<group>"; };
 		04EB3E3925A136DD00DA78A0 /* BalanceHeaderReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceHeaderReusableView.swift; sourceTree = "<group>"; };
+		04FA9F9225A2557E00E82816 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		04FA9F9925A256BF00E82816 /* TransactionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionService.swift; sourceTree = "<group>"; };
+		04FA9F9F25A26E5C00E82816 /* AuthManagerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManagerError.swift; sourceTree = "<group>"; };
 		08490499B9DC448B4DE92892 /* Pods-Moneasy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moneasy.release.xcconfig"; path = "Target Support Files/Pods-Moneasy/Pods-Moneasy.release.xcconfig"; sourceTree = "<group>"; };
 		1CE1CD30C724D175BBC31998 /* Pods-MoneasyUnitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoneasyUnitTests.debug.xcconfig"; path = "Target Support Files/Pods-MoneasyUnitTests/Pods-MoneasyUnitTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9061F7800CCB7CB9DBD4F22E /* Pods-Moneasy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moneasy.debug.xcconfig"; path = "Target Support Files/Pods-Moneasy/Pods-Moneasy.debug.xcconfig"; sourceTree = "<group>"; };
@@ -164,6 +170,7 @@
 			children = (
 				04A2786625A0A3F80098DA71 /* AppDelegate */,
 				049CFEB725A0A4A600CBE271 /* Coordinator */,
+				04FA9F9125A2557100E82816 /* Model */,
 				04739C4725A0B45F00FE200A /* Service */,
 				04A2786725A0A4050098DA71 /* Screens */,
 				046CDC1C25A0A7230032354D /* Resources */,
@@ -208,6 +215,7 @@
 			children = (
 				04739C4825A0B46F00FE200A /* Login */,
 				04739C6225A0F39700FE200A /* Authentication */,
+				04FA9F9825A256B000E82816 /* Transaction */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -225,6 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				04739C5525A0B5FC00FE200A /* LoginWithEmailError.swift */,
+				04FA9F9F25A26E5C00E82816 /* AuthManagerError.swift */,
 			);
 			path = ErrorHandling;
 			sourceTree = "<group>";
@@ -334,6 +343,22 @@
 				0407CAF525A1684F00D2A8B7 /* HeaderView */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		04FA9F9125A2557100E82816 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				04FA9F9225A2557E00E82816 /* Transaction.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		04FA9F9825A256B000E82816 /* Transaction */ = {
+			isa = PBXGroup;
+			children = (
+				04FA9F9925A256BF00E82816 /* TransactionService.swift */,
+			);
+			path = Transaction;
 			sourceTree = "<group>";
 		};
 		9ECD51FCB1B46D1C8ACB8C02 /* Frameworks */ = {
@@ -572,8 +597,11 @@
 				04739C6025A0F31E00FE200A /* BalanceViewController.swift in Sources */,
 				04739C4D25A0B52700FE200A /* LoginWithEmail.swift in Sources */,
 				0407CAF725A1688B00D2A8B7 /* BalanceValueHighlightView.swift in Sources */,
+				04FA9F9A25A256BF00E82816 /* TransactionService.swift in Sources */,
 				046CDC2325A0ABAB0032354D /* LoginViewModel.swift in Sources */,
 				04EB3E2925A12C7C00DA78A0 /* Identifier.swift in Sources */,
+				04FA9F9325A2557E00E82816 /* Transaction.swift in Sources */,
+				04FA9FA025A26E5C00E82816 /* AuthManagerError.swift in Sources */,
 				046CDC1E25A0A7350032354D /* ViewCodable.swift in Sources */,
 				049CFEBD25A0A4E100CBE271 /* MainCoordinator.swift in Sources */,
 				0424B95825A17FEC001818FE /* CreateTransactionViewController.swift in Sources */,
