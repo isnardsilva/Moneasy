@@ -6,6 +6,8 @@ target 'Moneasy' do
   # Pods for Moneasy
   pod 'SwiftLint'
   pod 'Firebase/Auth'
+  pod 'Firebase/Core'
+  pod 'Firebase/Firestore'
 end
 
 target 'MoneasyUnitTests' do

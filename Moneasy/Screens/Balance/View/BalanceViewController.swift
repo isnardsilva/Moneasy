@@ -46,9 +46,9 @@ extension BalanceViewController {
         }
         
         navBar.barTintColor = UIColor(named: Identifier.Color.balanceHeaderBackground)
-        navBar.tintColor = .white
+//        navBar.tintColor = .system
         navBar.isTranslucent = false
-        navBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+//        navBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         navBar.setBackgroundImage(UIImage(), for: .default)
         navBar.shadowImage = UIImage()
     }

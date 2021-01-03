@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0404021525A2050100B47766 /* CreateTransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0404021425A2050100B47766 /* CreateTransactionView.swift */; };
 		0407CAF725A1688B00D2A8B7 /* BalanceValueHighlightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0407CAF625A1688B00D2A8B7 /* BalanceValueHighlightView.swift */; };
 		040CFB2125A1085F0013BB6A /* LoginWithEmailTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040CFB2025A1085F0013BB6A /* LoginWithEmailTests.swift */; };
 		0424B95825A17FEC001818FE /* CreateTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424B95725A17FEC001818FE /* CreateTransactionViewController.swift */; };
@@ -49,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0404021425A2050100B47766 /* CreateTransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTransactionView.swift; sourceTree = "<group>"; };
 		0407CAF625A1688B00D2A8B7 /* BalanceValueHighlightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceValueHighlightView.swift; sourceTree = "<group>"; };
 		040CFB2025A1085F0013BB6A /* LoginWithEmailTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWithEmailTests.swift; sourceTree = "<group>"; };
 		0424B95725A17FEC001818FE /* CreateTransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTransactionViewController.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				0424B95725A17FEC001818FE /* CreateTransactionViewController.swift */,
+				0404021425A2050100B47766 /* CreateTransactionView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -576,6 +579,7 @@
 				0424B95825A17FEC001818FE /* CreateTransactionViewController.swift in Sources */,
 				04739C4A25A0B47C00FE200A /* LoginProtocol.swift in Sources */,
 				0467AA5625A0A0A40076FCAE /* SceneDelegate.swift in Sources */,
+				0404021525A2050100B47766 /* CreateTransactionView.swift in Sources */,
 				04EB3E2525A12B5F00DA78A0 /* BalanceView.swift in Sources */,
 				046CDC2725A0B0EA0032354D /* AlertManager.swift in Sources */,
 				04739C5625A0B5FC00FE200A /* LoginWithEmailError.swift in Sources */,

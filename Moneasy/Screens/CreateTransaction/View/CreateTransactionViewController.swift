@@ -9,25 +9,20 @@ import UIKit
 
 final class CreateTransactionViewController: UIViewController {
     // MARK: - Properties
+    private lazy var baseView = CreateTransactionView()
     weak var coordinator: MainCoordinator?
-    
-    private let addButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.setTitle("Add", for: .normal)
-        return button
-    }()
     
     
     // MARK: - View Life Cycle
     override func loadView() {
         super.loadView()
-        self.view.backgroundColor = .systemBackground
+        self.view = baseView
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        addButton.addTarget(self, action: #selector(saveTransaction), for: .touchUpInside)
+//        addButton.addTarget(self, action: #selector(saveTransaction), for: .touchUpInside)
     }
     
     @objc private func saveTransaction() {
