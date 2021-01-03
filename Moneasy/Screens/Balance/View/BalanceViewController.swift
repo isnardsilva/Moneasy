@@ -54,14 +54,21 @@ extension BalanceViewController {
     }
     
     private func setupNavigationBarButtons() {
+        let addTransactionBarButtomItem = UIBarButtonItem(image: UIImage(systemName: "plus"), style: .plain, target: self, action: #selector(addNewTransaction))
+        navigationItem.rightBarButtonItem = addTransactionBarButtomItem
+        
         let signOutBarButtom = UIBarButtonItem(image: UIImage(systemName: "multiply"), style: .plain, target: self, action: #selector(signOut))
-        navigationItem.rightBarButtonItem = signOutBarButtom
+        navigationItem.leftBarButtonItem = signOutBarButtom
     }
 }
 
 
 // MARK: - Actions
 extension BalanceViewController {
+    @objc private func addNewTransaction() {
+        coordinator?.navigateToCreateTransaction()
+    }
+    
     @objc private func signOut() {
         AuthManager().deleteUserSession(completionHandler: { [weak self] error in
             if error != nil {

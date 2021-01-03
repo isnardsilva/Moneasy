@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0407CAF725A1688B00D2A8B7 /* BalanceValueHighlightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0407CAF625A1688B00D2A8B7 /* BalanceValueHighlightView.swift */; };
 		040CFB2125A1085F0013BB6A /* LoginWithEmailTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040CFB2025A1085F0013BB6A /* LoginWithEmailTests.swift */; };
+		0424B95825A17FEC001818FE /* CreateTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424B95725A17FEC001818FE /* CreateTransactionViewController.swift */; };
 		0467AA5425A0A0A40076FCAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0467AA5325A0A0A40076FCAE /* AppDelegate.swift */; };
 		0467AA5625A0A0A40076FCAE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0467AA5525A0A0A40076FCAE /* SceneDelegate.swift */; };
 		0467AA5825A0A0A40076FCAE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0467AA5725A0A0A40076FCAE /* LoginViewController.swift */; };
@@ -50,6 +51,7 @@
 /* Begin PBXFileReference section */
 		0407CAF625A1688B00D2A8B7 /* BalanceValueHighlightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceValueHighlightView.swift; sourceTree = "<group>"; };
 		040CFB2025A1085F0013BB6A /* LoginWithEmailTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWithEmailTests.swift; sourceTree = "<group>"; };
+		0424B95725A17FEC001818FE /* CreateTransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTransactionViewController.swift; sourceTree = "<group>"; };
 		0467AA5025A0A0A40076FCAE /* Moneasy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moneasy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0467AA5325A0A0A40076FCAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0467AA5525A0A0A40076FCAE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -115,6 +117,22 @@
 				04E2E01125A16CCF00C16733 /* BalanceValueLittleView.swift */,
 			);
 			path = HeaderView;
+			sourceTree = "<group>";
+		};
+		0424B95525A17FB8001818FE /* CreateTransaction */ = {
+			isa = PBXGroup;
+			children = (
+				0424B95625A17FD7001818FE /* View */,
+			);
+			path = CreateTransaction;
+			sourceTree = "<group>";
+		};
+		0424B95625A17FD7001818FE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0424B95725A17FEC001818FE /* CreateTransactionViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		0467AA4725A0A0A40076FCAE = {
@@ -276,6 +294,7 @@
 				04A2786825A0A4160098DA71 /* LaunchScreen */,
 				04A2786925A0A4230098DA71 /* Login */,
 				04739C5D25A0F2F800FE200A /* Balance */,
+				0424B95525A17FB8001818FE /* CreateTransaction */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -554,6 +573,7 @@
 				04EB3E2925A12C7C00DA78A0 /* Identifier.swift in Sources */,
 				046CDC1E25A0A7350032354D /* ViewCodable.swift in Sources */,
 				049CFEBD25A0A4E100CBE271 /* MainCoordinator.swift in Sources */,
+				0424B95825A17FEC001818FE /* CreateTransactionViewController.swift in Sources */,
 				04739C4A25A0B47C00FE200A /* LoginProtocol.swift in Sources */,
 				0467AA5625A0A0A40076FCAE /* SceneDelegate.swift in Sources */,
 				04EB3E2525A12B5F00DA78A0 /* BalanceView.swift in Sources */,

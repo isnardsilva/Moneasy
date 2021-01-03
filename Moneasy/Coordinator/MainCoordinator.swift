@@ -59,4 +59,14 @@ extension MainCoordinator {
             navigationController.popToRootViewController(animated: false)
         }
     }
+    
+    func navigateToCreateTransaction() {
+        let createTransactionVC = CreateTransactionViewController()
+        createTransactionVC.coordinator = self
+        navigationController.pushViewController(createTransactionVC, animated: true)
+    }
+    
+    func closeCurrentScreen() {
+        navigationController.popViewController(animated: true)
+    }
 }
