@@ -9,8 +9,23 @@ import UIKit
 
 final class BalanceViewController: UIViewController {
     // MARK: - Properties
-    private lazy var baseView = BalanceView()
     weak var coordinator: MainCoordinator?
+    
+    private lazy var baseView = BalanceView()
+    private lazy var viewModel: TransactionListViewModel = {
+        let viewModel = TransactionListViewModel()
+        
+        viewModel.didReceiveTransactions = { [weak self] in
+            self?.didReceiveTransactions()
+        }
+        
+        viewModel.didReceiveError = { [weak self] error in
+            self?.didReceiveError(error: error)
+        }
+        
+        return viewModel
+    }()
+    
     
     
     // MARK: - View Life Cycle
@@ -34,6 +49,8 @@ final class BalanceViewController: UIViewController {
         
         setupNavigationBarAppearence()
         setupNavigationBarButtons()
+        
+        viewModel.fetchTransactions()
     }
 }
 
@@ -84,6 +101,19 @@ extension BalanceViewController {
 }
 
 
+// MARK: - Handle Transactions Updates
+extension BalanceViewController {
+    private func didReceiveError(error: Error) {
+        print("Deu ruim:", error.localizedDescription)
+    }
+    
+    private func didReceiveTransactions() {
+        baseView.collectionView.reloadData()
+    }
+}
+
+
+
 // MARK: - UICollectionViewDelegateFlowLayout
 extension BalanceViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -111,7 +141,7 @@ extension BalanceViewController: UICollectionViewDelegateFlowLayout {
 // MARK: - UICollectionViewDataSource
 extension BalanceViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return viewModel.transactions.count
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
@@ -134,6 +164,9 @@ extension BalanceViewController: UICollectionViewDataSource {
 // MARK: - UICollectionViewDelegate
 extension BalanceViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("Selected")
+        
+        let selectedTransaction = viewModel.transactions[indexPath.row]
+        
+        print("Selected:", selectedTransaction.name)
     }
 }

@@ -38,6 +38,10 @@
 		04FA9F9325A2557E00E82816 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FA9F9225A2557E00E82816 /* Transaction.swift */; };
 		04FA9F9A25A256BF00E82816 /* TransactionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FA9F9925A256BF00E82816 /* TransactionService.swift */; };
 		04FA9FA025A26E5C00E82816 /* AuthManagerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FA9F9F25A26E5C00E82816 /* AuthManagerError.swift */; };
+		04FA9FA425A278F200E82816 /* TransactionServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FA9FA325A278F200E82816 /* TransactionServiceError.swift */; };
+		04FA9FA925A27F2A00E82816 /* String+ToDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FA9FA825A27F2A00E82816 /* String+ToDate.swift */; };
+		04FA9FAF25A2824B00E82816 /* Date+ToString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FA9FAE25A2824B00E82816 /* Date+ToString.swift */; };
+		04FA9FB425A283EE00E82816 /* TransactionListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FA9FB325A283EE00E82816 /* TransactionListViewModel.swift */; };
 		4FBD05628063E37DBAF4D3BA /* Pods_Moneasy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC342695EFB7675EC82002A0 /* Pods_Moneasy.framework */; };
 		AF1152E13A59FBBCDAE4C6A4 /* Pods_MoneasyUnitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2451B9EE87B562FEECD1FB3 /* Pods_MoneasyUnitTests.framework */; };
 /* End PBXBuildFile section */
@@ -89,6 +93,10 @@
 		04FA9F9225A2557E00E82816 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		04FA9F9925A256BF00E82816 /* TransactionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionService.swift; sourceTree = "<group>"; };
 		04FA9F9F25A26E5C00E82816 /* AuthManagerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManagerError.swift; sourceTree = "<group>"; };
+		04FA9FA325A278F200E82816 /* TransactionServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionServiceError.swift; sourceTree = "<group>"; };
+		04FA9FA825A27F2A00E82816 /* String+ToDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+ToDate.swift"; sourceTree = "<group>"; };
+		04FA9FAE25A2824B00E82816 /* Date+ToString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+ToString.swift"; sourceTree = "<group>"; };
+		04FA9FB325A283EE00E82816 /* TransactionListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListViewModel.swift; sourceTree = "<group>"; };
 		08490499B9DC448B4DE92892 /* Pods-Moneasy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moneasy.release.xcconfig"; path = "Target Support Files/Pods-Moneasy/Pods-Moneasy.release.xcconfig"; sourceTree = "<group>"; };
 		1CE1CD30C724D175BBC31998 /* Pods-MoneasyUnitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoneasyUnitTests.debug.xcconfig"; path = "Target Support Files/Pods-MoneasyUnitTests/Pods-MoneasyUnitTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9061F7800CCB7CB9DBD4F22E /* Pods-Moneasy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moneasy.debug.xcconfig"; path = "Target Support Files/Pods-Moneasy/Pods-Moneasy.debug.xcconfig"; sourceTree = "<group>"; };
@@ -186,6 +194,7 @@
 			children = (
 				04739C4F25A0B5E400FE200A /* ErrorHandling */,
 				046CDC2925A0B1E40032354D /* CustomComponents */,
+				04FA9FA725A27F1000E82816 /* Extensions */,
 				046CDC1D25A0A7350032354D /* ViewCodable.swift */,
 				04739C6625A1056900FE200A /* FirebaseSources.swift */,
 				04EB3E2825A12C7C00DA78A0 /* Identifier.swift */,
@@ -234,6 +243,7 @@
 			children = (
 				04739C5525A0B5FC00FE200A /* LoginWithEmailError.swift */,
 				04FA9F9F25A26E5C00E82816 /* AuthManagerError.swift */,
+				04FA9FA325A278F200E82816 /* TransactionServiceError.swift */,
 			);
 			path = ErrorHandling;
 			sourceTree = "<group>";
@@ -241,6 +251,7 @@
 		04739C5D25A0F2F800FE200A /* Balance */ = {
 			isa = PBXGroup;
 			children = (
+				04FA9FB225A283E100E82816 /* ViewModel */,
 				04739C5E25A0F30B00FE200A /* View */,
 			);
 			path = Balance;
@@ -359,6 +370,23 @@
 				04FA9F9925A256BF00E82816 /* TransactionService.swift */,
 			);
 			path = Transaction;
+			sourceTree = "<group>";
+		};
+		04FA9FA725A27F1000E82816 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				04FA9FA825A27F2A00E82816 /* String+ToDate.swift */,
+				04FA9FAE25A2824B00E82816 /* Date+ToString.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		04FA9FB225A283E100E82816 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				04FA9FB325A283EE00E82816 /* TransactionListViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		9ECD51FCB1B46D1C8ACB8C02 /* Frameworks */ = {
@@ -586,6 +614,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04E6702F25A1252800E505F5 /* LoadingAlertViewController.swift in Sources */,
+				04FA9FA425A278F200E82816 /* TransactionServiceError.swift in Sources */,
 				046CDC1925A0A7190032354D /* LoginView.swift in Sources */,
 				04E6703F25A1259A00E505F5 /* LoadingAlertView.swift in Sources */,
 				04E2E01225A16CCF00C16733 /* BalanceValueLittleView.swift in Sources */,
@@ -601,6 +630,8 @@
 				046CDC2325A0ABAB0032354D /* LoginViewModel.swift in Sources */,
 				04EB3E2925A12C7C00DA78A0 /* Identifier.swift in Sources */,
 				04FA9F9325A2557E00E82816 /* Transaction.swift in Sources */,
+				04FA9FB425A283EE00E82816 /* TransactionListViewModel.swift in Sources */,
+				04FA9FAF25A2824B00E82816 /* Date+ToString.swift in Sources */,
 				04FA9FA025A26E5C00E82816 /* AuthManagerError.swift in Sources */,
 				046CDC1E25A0A7350032354D /* ViewCodable.swift in Sources */,
 				049CFEBD25A0A4E100CBE271 /* MainCoordinator.swift in Sources */,
@@ -610,6 +641,7 @@
 				0404021525A2050100B47766 /* CreateTransactionView.swift in Sources */,
 				04EB3E2525A12B5F00DA78A0 /* BalanceView.swift in Sources */,
 				046CDC2725A0B0EA0032354D /* AlertManager.swift in Sources */,
+				04FA9FA925A27F2A00E82816 /* String+ToDate.swift in Sources */,
 				04739C5625A0B5FC00FE200A /* LoginWithEmailError.swift in Sources */,
 				04EB3E3A25A136DD00DA78A0 /* BalanceHeaderReusableView.swift in Sources */,
 			);
