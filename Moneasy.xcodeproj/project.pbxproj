@@ -28,6 +28,8 @@
 		04739C6425A0F3AA00FE200A /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04739C6325A0F3AA00FE200A /* AuthManager.swift */; };
 		04739C6725A1056900FE200A /* FirebaseSources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04739C6625A1056900FE200A /* FirebaseSources.swift */; };
 		04795E6425A2B570009779DC /* TransactionServiceObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04795E6325A2B570009779DC /* TransactionServiceObserver.swift */; };
+		04795E6825A2B79A009779DC /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04795E6725A2B79A009779DC /* TransactionCell.swift */; };
+		04795E6D25A2BCDA009779DC /* TransactionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04795E6C25A2BCDA009779DC /* TransactionViewModel.swift */; };
 		049CFEB925A0A4B800CBE271 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CFEB825A0A4B800CBE271 /* Coordinator.swift */; };
 		049CFEBD25A0A4E100CBE271 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CFEBC25A0A4E100CBE271 /* MainCoordinator.swift */; };
 		04E2E01225A16CCF00C16733 /* BalanceValueLittleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E2E01125A16CCF00C16733 /* BalanceValueLittleView.swift */; };
@@ -84,6 +86,8 @@
 		04739C8125A1083400FE200A /* MoneasyUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoneasyUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04739C8525A1083400FE200A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04795E6325A2B570009779DC /* TransactionServiceObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionServiceObserver.swift; sourceTree = "<group>"; };
+		04795E6725A2B79A009779DC /* TransactionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCell.swift; sourceTree = "<group>"; };
+		04795E6C25A2BCDA009779DC /* TransactionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewModel.swift; sourceTree = "<group>"; };
 		049CFEB825A0A4B800CBE271 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		049CFEBC25A0A4E100CBE271 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		04E2E01125A16CCF00C16733 /* BalanceValueLittleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceValueLittleView.swift; sourceTree = "<group>"; };
@@ -140,6 +144,7 @@
 		0424B95525A17FB8001818FE /* CreateTransaction */ = {
 			isa = PBXGroup;
 			children = (
+				04795E6B25A2BC81009779DC /* ViewModel */,
 				0424B95625A17FD7001818FE /* View */,
 			);
 			path = CreateTransaction;
@@ -286,6 +291,14 @@
 			path = MoneasyUnitTests;
 			sourceTree = "<group>";
 		};
+		04795E6B25A2BC81009779DC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				04795E6C25A2BCDA009779DC /* TransactionViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		049CFEB725A0A4A600CBE271 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
@@ -354,6 +367,7 @@
 			isa = PBXGroup;
 			children = (
 				0407CAF525A1684F00D2A8B7 /* HeaderView */,
+				04795E6725A2B79A009779DC /* TransactionCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -639,11 +653,13 @@
 				04795E6425A2B570009779DC /* TransactionServiceObserver.swift in Sources */,
 				046CDC1E25A0A7350032354D /* ViewCodable.swift in Sources */,
 				049CFEBD25A0A4E100CBE271 /* MainCoordinator.swift in Sources */,
+				04795E6825A2B79A009779DC /* TransactionCell.swift in Sources */,
 				0424B95825A17FEC001818FE /* CreateTransactionViewController.swift in Sources */,
 				04739C4A25A0B47C00FE200A /* LoginProtocol.swift in Sources */,
 				0467AA5625A0A0A40076FCAE /* SceneDelegate.swift in Sources */,
 				0404021525A2050100B47766 /* CreateTransactionView.swift in Sources */,
 				04EB3E2525A12B5F00DA78A0 /* BalanceView.swift in Sources */,
+				04795E6D25A2BCDA009779DC /* TransactionViewModel.swift in Sources */,
 				046CDC2725A0B0EA0032354D /* AlertManager.swift in Sources */,
 				04FA9FA925A27F2A00E82816 /* String+ToDate.swift in Sources */,
 				04739C5625A0B5FC00FE200A /* LoginWithEmailError.swift in Sources */,

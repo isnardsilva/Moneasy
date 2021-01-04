@@ -166,8 +166,15 @@ extension BalanceViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Identifier.Cell.transactionCell, for: indexPath)
-        cell.backgroundColor = .green
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Identifier.Cell.transactionCell, for: indexPath) as? TransactionCell else {
+            fatalError("Error load cell as a TransactionCell")
+        }
+        
+        let transaction = viewModel.transactions[indexPath.row]
+        let transactionViewModel = TransactionViewModel(transaction: transaction)
+        
+        cell.transactionViewModel = transactionViewModel
+        
         return cell
     }
 }

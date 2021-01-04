@@ -13,7 +13,7 @@ final class BalanceView: UIView {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
         collectionView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         collectionView.backgroundColor = .clear
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: Identifier.Cell.transactionCell)
+        collectionView.register(TransactionCell.self, forCellWithReuseIdentifier: Identifier.Cell.transactionCell)
         // swiftlint:disable line_length
         collectionView.register(BalanceHeaderReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: Identifier.Cell.balanceHeaderView)
         return collectionView
