@@ -42,13 +42,12 @@ final class BalanceViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.title = "Moneasy"
-        
         baseView.collectionView.dataSource = self
         baseView.collectionView.delegate = self
         
         setupNavigationBarAppearence()
         setupNavigationBarButtons()
+        setupNotificationCenter()
         
         viewModel.fetchTransactions()
     }
@@ -61,6 +60,8 @@ extension BalanceViewController {
         guard let navBar = navigationController?.navigationBar else {
             return
         }
+        
+        navigationItem.title = "Moneasy"
         
         navBar.barTintColor = UIColor(named: Identifier.Color.balanceHeaderBackground)
 //        navBar.tintColor = .system
@@ -79,11 +80,14 @@ extension BalanceViewController {
     }
 }
 
-
 // MARK: - Actions
 extension BalanceViewController {
     @objc private func addNewTransaction() {
         coordinator?.navigateToCreateTransaction()
+    }
+    
+    @objc private func reloadData() {
+        viewModel.fetchTransactions()
     }
     
     @objc private func signOut() {
@@ -97,6 +101,14 @@ extension BalanceViewController {
                 self?.coordinator?.navigateToLogin()
             }
         })
+    }
+}
+
+
+// MARK: - Handle Notification Center
+extension BalanceViewController {
+    private func setupNotificationCenter() {
+        NotificationCenter.default.addObserver(self, selector: #selector(reloadData), name: .TransactionServiceUpdated, object: nil)
     }
 }
 

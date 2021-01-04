@@ -17,7 +17,11 @@ final class TransactionService {
         let dictTransaction = self.convertTransactionObjectToDictionary(transaction)
         
         database.collection(Identifier.Database.transactionsKey).addDocument(data: dictTransaction, completion: { error in
+            
             completionHandler(error)
+            if error == nil {
+                NotificationCenter.default.post(name: .TransactionServiceUpdated, object: nil)
+            }
         })
     }
     

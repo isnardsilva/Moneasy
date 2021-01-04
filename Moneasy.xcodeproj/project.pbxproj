@@ -27,6 +27,7 @@
 		04739C6025A0F31E00FE200A /* BalanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04739C5F25A0F31E00FE200A /* BalanceViewController.swift */; };
 		04739C6425A0F3AA00FE200A /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04739C6325A0F3AA00FE200A /* AuthManager.swift */; };
 		04739C6725A1056900FE200A /* FirebaseSources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04739C6625A1056900FE200A /* FirebaseSources.swift */; };
+		04795E6425A2B570009779DC /* TransactionServiceObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04795E6325A2B570009779DC /* TransactionServiceObserver.swift */; };
 		049CFEB925A0A4B800CBE271 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CFEB825A0A4B800CBE271 /* Coordinator.swift */; };
 		049CFEBD25A0A4E100CBE271 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CFEBC25A0A4E100CBE271 /* MainCoordinator.swift */; };
 		04E2E01225A16CCF00C16733 /* BalanceValueLittleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E2E01125A16CCF00C16733 /* BalanceValueLittleView.swift */; };
@@ -82,6 +83,7 @@
 		04739C6625A1056900FE200A /* FirebaseSources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseSources.swift; sourceTree = "<group>"; };
 		04739C8125A1083400FE200A /* MoneasyUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoneasyUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04739C8525A1083400FE200A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04795E6325A2B570009779DC /* TransactionServiceObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionServiceObserver.swift; sourceTree = "<group>"; };
 		049CFEB825A0A4B800CBE271 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		049CFEBC25A0A4E100CBE271 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		04E2E01125A16CCF00C16733 /* BalanceValueLittleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceValueLittleView.swift; sourceTree = "<group>"; };
@@ -368,6 +370,7 @@
 			isa = PBXGroup;
 			children = (
 				04FA9F9925A256BF00E82816 /* TransactionService.swift */,
+				04795E6325A2B570009779DC /* TransactionServiceObserver.swift */,
 			);
 			path = Transaction;
 			sourceTree = "<group>";
@@ -633,6 +636,7 @@
 				04FA9FB425A283EE00E82816 /* TransactionListViewModel.swift in Sources */,
 				04FA9FAF25A2824B00E82816 /* Date+ToString.swift in Sources */,
 				04FA9FA025A26E5C00E82816 /* AuthManagerError.swift in Sources */,
+				04795E6425A2B570009779DC /* TransactionServiceObserver.swift in Sources */,
 				046CDC1E25A0A7350032354D /* ViewCodable.swift in Sources */,
 				049CFEBD25A0A4E100CBE271 /* MainCoordinator.swift in Sources */,
 				0424B95825A17FEC001818FE /* CreateTransactionViewController.swift in Sources */,
