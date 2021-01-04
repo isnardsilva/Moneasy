@@ -15,14 +15,16 @@ final class TransactionService {
     // MARK: - CRUD Methods
     func addTransaction(_ transaction: Transaction, completionHandler: @escaping (Error?) -> Void) {
         let dictTransaction = self.convertTransactionObjectToDictionary(transaction)
+        var detectedError: Error?
         
         database.collection(Identifier.Database.transactionsKey).addDocument(data: dictTransaction, completion: { error in
-            
-            completionHandler(error)
-            if error == nil {
-                NotificationCenter.default.post(name: .TransactionServiceUpdated, object: nil)
-            }
+            detectedError = error
         })
+        
+        completionHandler(detectedError)
+        if detectedError == nil {
+            NotificationCenter.default.post(name: .TransactionServiceUpdated, object: nil)
+        }
     }
     
     func fetchTransactions(completionHandler: @escaping (Result<[Transaction], Error>) -> Void) {
