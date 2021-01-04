@@ -90,27 +90,6 @@ final class CreateTransactionView: UIView {
     }()
     
     
-    // Buttons
-    let saveButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.setTitle("Salvar", for: .normal)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        return button
-    }()
-    
-    
-    
-    /*
-     let name: String
-     let userUid: String
-     let value: Double
-     let description: String
-     let date: Date
-     let type: TransactionType
-     let status: Bool // Despesa (está pago?) / Receita (recebido?)
-     */
-    
-    
     // MARK: - Initialization
     init() {
         super.init(frame: .zero)
@@ -141,8 +120,6 @@ extension CreateTransactionView: ViewCodable {
         inputsStackView.addArrangedSubview(statusComponentsStackView)
         statusComponentsStackView.addArrangedSubview(statusLabel)
         statusComponentsStackView.addArrangedSubview(statusSwitch)
-        
-        addSubview(saveButton)
     }
     
     func setupConstraints() {
@@ -150,11 +127,6 @@ extension CreateTransactionView: ViewCodable {
             inputsStackView.topAnchor.constraint(equalTo: self.layoutMarginsGuide.topAnchor, constant: 30),
             inputsStackView.leadingAnchor.constraint(equalTo: self.layoutMarginsGuide.leadingAnchor),
             inputsStackView.trailingAnchor.constraint(equalTo: self.layoutMarginsGuide.trailingAnchor)
-        ])
-        
-        NSLayoutConstraint.activate([
-            saveButton.topAnchor.constraint(equalTo: inputsStackView.bottomAnchor, constant: 50),
-            saveButton.centerXAnchor.constraint(equalTo: self.centerXAnchor)
         ])
     }
     

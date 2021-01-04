@@ -64,9 +64,8 @@ extension BalanceViewController {
         navigationItem.title = "Moneasy"
         
         navBar.barTintColor = UIColor(named: Identifier.Color.balanceHeaderBackground)
-//        navBar.tintColor = .system
+        navigationController?.navigationBar.topItem?.backButtonTitle = ""
         navBar.isTranslucent = false
-//        navBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         navBar.setBackgroundImage(UIImage(), for: .default)
         navBar.shadowImage = UIImage()
     }
@@ -116,7 +115,8 @@ extension BalanceViewController {
 // MARK: - Handle Transactions Updates
 extension BalanceViewController {
     private func didReceiveError(error: Error) {
-        print("Deu ruim:", error.localizedDescription)
+        
+        print(error.localizedDescription)
     }
     
     private func didReceiveTransactions() {

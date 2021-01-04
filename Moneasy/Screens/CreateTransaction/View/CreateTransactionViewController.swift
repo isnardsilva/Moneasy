@@ -22,17 +22,22 @@ final class CreateTransactionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupActios()
+        setupNavigationBarButtons()
+    }
+}
+
+// MARK: - Navigation Bar
+extension CreateTransactionViewController {
+    private func setupNavigationBarButtons() {
+        let saveBarButtomItem = UIBarButtonItem(title: "Salvar", style: .plain, target: self, action: #selector(saveTransaction))
+        navigationItem.rightBarButtonItem = saveBarButtomItem
+        navigationController?.navigationBar.topItem?.backButtonTitle = ""
     }
 }
 
 
 // MARK: - Actions
 extension CreateTransactionViewController {
-    private func setupActios() {
-        baseView.saveButton.addTarget(self, action: #selector(saveTransaction), for: .touchUpInside)
-    }
-    
     @objc private func saveTransaction() {
         guard let dataEntered = self.getDataEntered() else {
             return
@@ -63,31 +68,6 @@ extension CreateTransactionViewController {
                 })
             }
         })
-        
-//        guard let typedName = baseView.nameTextField.text, !typedName.isEmpty else {
-//            print("Insira um nome")
-//            return
-//        }
-//
-//        guard let strValue = baseView.valueTextField.text, !strValue.isEmpty else {
-//            print("Insira o valor")
-//            return
-//        }
-//
-//        guard let typedValue = Double(strValue) else {
-//            print("Insira um valor válido")
-//            return
-//        }
-        
-//        let name: String
-//        let userUid: String
-//        let value: Double
-//        let description: String
-//        let date: Date
-//        let type: TransactionType.RawValue
-//        let status: Bool // Despesa (está pago?) / Receita (recebido?)
-//        let typedDescription = baseView.descriptionTextField.text ?? ""
-//        let typedDate = Date()
     }
 }
 
