@@ -88,8 +88,31 @@ final class TransactionService {
         })
     }
     
-    func deleteTransaction(_ transaction: Transaction, completionHandler: @escaping (Error) -> Void) {
-        
+    func deleteTransaction(_ transaction: Transaction, completionHandler: @escaping (Error?) -> Void) {
+        // Get reference to transaction
+        database.collection(Identifier.Database.transactionsKey).whereField("uid", isEqualTo: transaction.uid).getDocuments(completion: { (snapshot, error) in
+            
+            if let detectedError = error {
+                completionHandler(detectedError)
+                return
+            }
+
+            guard let validSnapshot = snapshot,
+                  let validDocument = validSnapshot.documents.first else {
+                completionHandler(TransactionServiceError.emptyResponse)
+                return
+            }
+            
+            var detectedError: Error?
+            validDocument.reference.delete(completion: { error in
+                detectedError = error
+            })
+            
+            completionHandler(detectedError)
+            if detectedError == nil {
+                NotificationCenter.default.post(name: .TransactionServiceUpdated, object: nil)
+            }
+        })
     }
 }
 

@@ -50,9 +50,17 @@ final class TransactionDetailViewController: UIViewController {
 // MARK: - Navigation Bar
 extension TransactionDetailViewController {
     private func setupNavigationBarButtons() {
+        navigationItem.rightBarButtonItems = []
+        
         let saveBarButtomItem = UIBarButtonItem(title: "Salvar", style: .plain, target: self, action: #selector(saveTransaction))
-        navigationItem.rightBarButtonItem = saveBarButtomItem
-        navigationController?.navigationBar.topItem?.backButtonTitle = ""
+        navigationItem.rightBarButtonItems?.append(saveBarButtomItem)
+        
+        // Check if is update mode
+        if existingTransaction != nil {
+            let deleteBarButtomItem = UIBarButtonItem(image: UIImage(systemName: "trash"), style: .plain, target: self, action: #selector(deleteTransaction))
+            navigationItem.rightBarButtonItems?.append(deleteBarButtomItem)
+        }
+        
     }
 }
 
@@ -72,6 +80,18 @@ extension TransactionDetailViewController {
         } else {
             // Save
             self.handleSavingTransaction()
+        }
+    }
+    
+    @objc private func deleteTransaction() {
+        if let currentTransaction = existingTransaction {
+            viewModel.deleteTransaction(currentTransaction, completionHandler: { [weak self] error in
+                if let detectedError = error {
+                    self?.showAlert(title: "Atenção", message: detectedError.localizedDescription)
+                } else {
+                    self?.coordinator?.closeCurrentScreen()
+                }
+            })
         }
     }
     
