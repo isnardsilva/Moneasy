@@ -60,8 +60,8 @@ extension MainCoordinator {
         }
     }
     
-    func navigateToCreateTransaction() {
-        let createTransactionVC = CreateTransactionViewController()
+    func navigateToTransactionDetail(transaction: Transaction? = nil) {
+        let createTransactionVC = TransactionDetailViewController(transaction: transaction)
         createTransactionVC.coordinator = self
         navigationController.pushViewController(createTransactionVC, animated: true)
     }

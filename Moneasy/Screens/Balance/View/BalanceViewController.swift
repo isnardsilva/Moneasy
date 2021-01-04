@@ -82,7 +82,7 @@ extension BalanceViewController {
 // MARK: - Actions
 extension BalanceViewController {
     @objc private func addNewTransaction() {
-        coordinator?.navigateToCreateTransaction()
+        coordinator?.navigateToTransactionDetail()
     }
     
     @objc private func reloadData() {
@@ -189,7 +189,6 @@ extension BalanceViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         let selectedTransaction = viewModel.transactions[indexPath.row]
-        
-        print("Selected:", selectedTransaction.name)
+        coordinator?.navigateToTransactionDetail(transaction: selectedTransaction)
     }
 }

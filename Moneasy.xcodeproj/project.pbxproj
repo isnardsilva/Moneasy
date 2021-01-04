@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0404021525A2050100B47766 /* CreateTransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0404021425A2050100B47766 /* CreateTransactionView.swift */; };
+		0404021525A2050100B47766 /* TransactionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0404021425A2050100B47766 /* TransactionDetailView.swift */; };
 		0407CAF725A1688B00D2A8B7 /* BalanceValueHighlightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0407CAF625A1688B00D2A8B7 /* BalanceValueHighlightView.swift */; };
 		040CFB2125A1085F0013BB6A /* LoginWithEmailTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040CFB2025A1085F0013BB6A /* LoginWithEmailTests.swift */; };
-		0424B95825A17FEC001818FE /* CreateTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424B95725A17FEC001818FE /* CreateTransactionViewController.swift */; };
+		0424B95825A17FEC001818FE /* TransactionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424B95725A17FEC001818FE /* TransactionDetailViewController.swift */; };
 		0467AA5425A0A0A40076FCAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0467AA5325A0A0A40076FCAE /* AppDelegate.swift */; };
 		0467AA5625A0A0A40076FCAE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0467AA5525A0A0A40076FCAE /* SceneDelegate.swift */; };
 		0467AA5825A0A0A40076FCAE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0467AA5725A0A0A40076FCAE /* LoginViewController.swift */; };
@@ -32,6 +32,7 @@
 		04795E6D25A2BCDA009779DC /* TransactionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04795E6C25A2BCDA009779DC /* TransactionViewModel.swift */; };
 		049CFEB925A0A4B800CBE271 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CFEB825A0A4B800CBE271 /* Coordinator.swift */; };
 		049CFEBD25A0A4E100CBE271 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CFEBC25A0A4E100CBE271 /* MainCoordinator.swift */; };
+		04A9184625A384D70060A190 /* TransactionDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A9184525A384D70060A190 /* TransactionDetailViewModel.swift */; };
 		04E2E01225A16CCF00C16733 /* BalanceValueLittleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E2E01125A16CCF00C16733 /* BalanceValueLittleView.swift */; };
 		04E6702F25A1252800E505F5 /* LoadingAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E6702E25A1252800E505F5 /* LoadingAlertViewController.swift */; };
 		04E6703F25A1259A00E505F5 /* LoadingAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E6703E25A1259A00E505F5 /* LoadingAlertView.swift */; };
@@ -60,10 +61,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0404021425A2050100B47766 /* CreateTransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTransactionView.swift; sourceTree = "<group>"; };
+		0404021425A2050100B47766 /* TransactionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailView.swift; sourceTree = "<group>"; };
 		0407CAF625A1688B00D2A8B7 /* BalanceValueHighlightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceValueHighlightView.swift; sourceTree = "<group>"; };
 		040CFB2025A1085F0013BB6A /* LoginWithEmailTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWithEmailTests.swift; sourceTree = "<group>"; };
-		0424B95725A17FEC001818FE /* CreateTransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTransactionViewController.swift; sourceTree = "<group>"; };
+		0424B95725A17FEC001818FE /* TransactionDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailViewController.swift; sourceTree = "<group>"; };
 		0467AA5025A0A0A40076FCAE /* Moneasy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moneasy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0467AA5325A0A0A40076FCAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0467AA5525A0A0A40076FCAE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +91,7 @@
 		04795E6C25A2BCDA009779DC /* TransactionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewModel.swift; sourceTree = "<group>"; };
 		049CFEB825A0A4B800CBE271 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		049CFEBC25A0A4E100CBE271 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		04A9184525A384D70060A190 /* TransactionDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailViewModel.swift; sourceTree = "<group>"; };
 		04E2E01125A16CCF00C16733 /* BalanceValueLittleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceValueLittleView.swift; sourceTree = "<group>"; };
 		04E6702E25A1252800E505F5 /* LoadingAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingAlertViewController.swift; sourceTree = "<group>"; };
 		04E6703E25A1259A00E505F5 /* LoadingAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingAlertView.swift; sourceTree = "<group>"; };
@@ -141,20 +143,20 @@
 			path = HeaderView;
 			sourceTree = "<group>";
 		};
-		0424B95525A17FB8001818FE /* CreateTransaction */ = {
+		0424B95525A17FB8001818FE /* TransactionDetail */ = {
 			isa = PBXGroup;
 			children = (
 				04795E6B25A2BC81009779DC /* ViewModel */,
 				0424B95625A17FD7001818FE /* View */,
 			);
-			path = CreateTransaction;
+			path = TransactionDetail;
 			sourceTree = "<group>";
 		};
 		0424B95625A17FD7001818FE /* View */ = {
 			isa = PBXGroup;
 			children = (
-				0424B95725A17FEC001818FE /* CreateTransactionViewController.swift */,
-				0404021425A2050100B47766 /* CreateTransactionView.swift */,
+				0424B95725A17FEC001818FE /* TransactionDetailViewController.swift */,
+				0404021425A2050100B47766 /* TransactionDetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -294,7 +296,7 @@
 		04795E6B25A2BC81009779DC /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				04795E6C25A2BCDA009779DC /* TransactionViewModel.swift */,
+				04A9184525A384D70060A190 /* TransactionDetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -332,7 +334,7 @@
 				04A2786825A0A4160098DA71 /* LaunchScreen */,
 				04A2786925A0A4230098DA71 /* Login */,
 				04739C5D25A0F2F800FE200A /* Balance */,
-				0424B95525A17FB8001818FE /* CreateTransaction */,
+				0424B95525A17FB8001818FE /* TransactionDetail */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -402,6 +404,7 @@
 			isa = PBXGroup;
 			children = (
 				04FA9FB325A283EE00E82816 /* TransactionListViewModel.swift */,
+				04795E6C25A2BCDA009779DC /* TransactionViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -632,6 +635,7 @@
 			files = (
 				04E6702F25A1252800E505F5 /* LoadingAlertViewController.swift in Sources */,
 				04FA9FA425A278F200E82816 /* TransactionServiceError.swift in Sources */,
+				04A9184625A384D70060A190 /* TransactionDetailViewModel.swift in Sources */,
 				046CDC1925A0A7190032354D /* LoginView.swift in Sources */,
 				04E6703F25A1259A00E505F5 /* LoadingAlertView.swift in Sources */,
 				04E2E01225A16CCF00C16733 /* BalanceValueLittleView.swift in Sources */,
@@ -654,10 +658,10 @@
 				046CDC1E25A0A7350032354D /* ViewCodable.swift in Sources */,
 				049CFEBD25A0A4E100CBE271 /* MainCoordinator.swift in Sources */,
 				04795E6825A2B79A009779DC /* TransactionCell.swift in Sources */,
-				0424B95825A17FEC001818FE /* CreateTransactionViewController.swift in Sources */,
+				0424B95825A17FEC001818FE /* TransactionDetailViewController.swift in Sources */,
 				04739C4A25A0B47C00FE200A /* LoginProtocol.swift in Sources */,
 				0467AA5625A0A0A40076FCAE /* SceneDelegate.swift in Sources */,
-				0404021525A2050100B47766 /* CreateTransactionView.swift in Sources */,
+				0404021525A2050100B47766 /* TransactionDetailView.swift in Sources */,
 				04EB3E2525A12B5F00DA78A0 /* BalanceView.swift in Sources */,
 				04795E6D25A2BCDA009779DC /* TransactionViewModel.swift in Sources */,
 				046CDC2725A0B0EA0032354D /* AlertManager.swift in Sources */,

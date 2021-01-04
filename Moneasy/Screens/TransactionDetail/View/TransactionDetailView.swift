@@ -77,7 +77,7 @@ final class TransactionDetailView: UIView {
         return stackView
     }()
     
-    private let statusLabel: UILabel = {
+    let statusLabel: UILabel = {
         let label = UILabel()
         label.text = "Recebido"
         return label
