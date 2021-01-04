@@ -55,6 +55,7 @@ identifier_name:
     error: 4 # only error
   excluded: # excluded via string array
     - id
+    - uid
     - URL
     - GlobalAPIKey
 reporter: "xcode" # reporter type (xcode, json, csv, checkstyle, codeclimate, junit, html, emoji, sonarqube, markdown, github-actions-logging)
