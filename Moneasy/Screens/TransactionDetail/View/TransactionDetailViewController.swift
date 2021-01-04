@@ -127,7 +127,8 @@ extension TransactionDetailViewController {
             return
         }
         
-        let updatedTransaction = Transaction(name: dataEntered.name,
+        let updatedTransaction = Transaction(uid: validTransaction.uid,
+                                             name: dataEntered.name,
                                              userUid: validTransaction.userUid,
                                              value: dataEntered.value,
                                              description: dataEntered.description,

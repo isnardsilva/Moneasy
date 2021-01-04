@@ -13,6 +13,7 @@ enum TransactionType: String {
 }
 
 struct Transaction {
+    let uid: String
     let name: String
     let userUid: String
     let value: Double
@@ -20,4 +21,16 @@ struct Transaction {
     let date: Date
     let type: TransactionType
     let status: Bool // Despesa (está pago?) / Receita (recebido?)
+    
+    
+    init(uid: String = UUID().uuidString, name: String, userUid: String, value: Double, description: String, date: Date, type: TransactionType, status: Bool) {
+        self.uid = uid
+        self.name = name
+        self.userUid = userUid
+        self.value = value
+        self.description = description
+        self.date = date
+        self.type = type
+        self.status = status
+    }
 }

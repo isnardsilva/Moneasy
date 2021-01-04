@@ -56,6 +56,41 @@ final class TransactionService {
             }
         })
     }
+    
+    func updateTransaction(_ transaction: Transaction, completionHandler: @escaping (Error?) -> Void) {
+        // Get reference to transaction
+        database.collection(Identifier.Database.transactionsKey).whereField("uid", isEqualTo: transaction.uid).getDocuments(completion: { [weak self] (snapshot, error) in
+            
+            guard let self = self else { return }
+            
+            if let detectedError = error {
+                completionHandler(detectedError)
+                return
+            }
+
+            guard let validSnapshot = snapshot,
+                  let validDocument = validSnapshot.documents.first else {
+                completionHandler(TransactionServiceError.emptyResponse)
+                return
+            }
+            
+            let dictTransaction = self.convertTransactionObjectToDictionary(transaction)
+            
+            var detectedError: Error?
+            validDocument.reference.updateData(dictTransaction, completion: { error in
+                detectedError = error
+            })
+            
+            completionHandler(detectedError)
+            if detectedError == nil {
+                NotificationCenter.default.post(name: .TransactionServiceUpdated, object: nil)
+            }
+        })
+    }
+    
+    func deleteTransaction(_ transaction: Transaction, completionHandler: @escaping (Error) -> Void) {
+        
+    }
 }
 
 
@@ -99,6 +134,7 @@ extension TransactionService {
     
     private func convertTransactionObjectToDictionary(_ transaction: Transaction) -> [String: Any] {
         let dict: [String: Any] = [
+            "uid": transaction.uid,
             "name": transaction.name,
             "userUid": transaction.userUid,
             "value": transaction.value,
@@ -112,7 +148,8 @@ extension TransactionService {
     }
     
     private func convertDictionaryObjectToTransaction(dict: [String: Any]) -> Transaction? {
-        guard let name = dict["name"] as? String,
+        guard let uid = dict["uid"] as? String,
+              let name = dict["name"] as? String,
               let userUid = dict["userUid"] as? String,
               let value = dict["value"] as? Double,
               let description = dict["description"] as? String,
@@ -147,7 +184,7 @@ extension TransactionService {
             return nil
         }
         
-        let transaction = Transaction(name: name, userUid: userUid, value: value, description: description, date: date, type: validTransactionType, status: status)
+        let transaction = Transaction(uid: uid, name: name, userUid: userUid, value: value, description: description, date: date, type: validTransactionType, status: status)
         
         return transaction
     }
