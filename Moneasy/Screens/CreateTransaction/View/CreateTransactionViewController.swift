@@ -56,11 +56,11 @@ extension CreateTransactionViewController {
                                               description: dataEntered.description,
                                               date: dataEntered.date,
                                               type: dataEntered.transactionType,
-                                              status: true)
+                                              status: dataEntered.status)
                 
                 TransactionService().addTransaction(transaction, completionHandler: { error in
                     if let detectedError = error {
-                        print(detectedError.localizedDescription)
+                        self?.showAlert(title: "Atenção", message: detectedError.localizedDescription)
                     } else {
                         print("Save success")
                         self?.coordinator?.closeCurrentScreen()
@@ -75,25 +75,39 @@ extension CreateTransactionViewController {
 // MARK: - Handle Transaction Data
 extension CreateTransactionViewController {
     // swiftlint:disable large_tuple
-    private func getDataEntered() -> (name: String, value: Double, description: String, date: Date, transactionType: TransactionType)? {
+    private func getDataEntered() -> (name: String, value: Double, description: String, date: Date, transactionType: TransactionType, status: Bool)? {
         guard let typedName = baseView.nameTextField.text, !typedName.isEmpty else {
-            print("Insira um nome")
+            self.showAlert(title: "Atenção", message: "Insira um nome")
             return nil
         }
         
         guard let strValue = baseView.valueTextField.text, !strValue.isEmpty else {
-            print("Insira o valor")
+//            print("Insira o valor")
+            self.showAlert(title: "Atenção", message: "Insira o valor")
             return nil
         }
         
         guard let typedValue = Double(strValue) else {
-            print("Insira um valor válido")
+//            print("Insira um valor válido")
+            self.showAlert(title: "Atenção", message: "Insira um valor válido")
             return nil
         }
         
         let typedDescription = baseView.descriptionTextField.text ?? ""
-        let typedDate = Date()
+        let typedDate = baseView.datePicker.date
         
-        return (name: typedName, value: typedValue, description: typedDescription, date: typedDate, transactionType: TransactionType.expense)
+        let selectedTransactionTypeIndex = baseView.transactionTypeSegmentControl.selectedSegmentIndex
+        let selectedTransactionType: TransactionType = selectedTransactionTypeIndex == 0 ? .revenue : .expense
+        
+        return (name: typedName, value: typedValue, description: typedDescription, date: typedDate, transactionType: selectedTransactionType, status: baseView.statusSwitch.isOn)
+    }
+}
+
+
+// MARK: - Handle Alerts
+extension CreateTransactionViewController {
+    private func showAlert(title: String, message: String) {
+        let alert = AlertManager().createDefaultAlert(title: title, message: message)
+        self.present(alert, animated: true, completion: nil)
     }
 }
