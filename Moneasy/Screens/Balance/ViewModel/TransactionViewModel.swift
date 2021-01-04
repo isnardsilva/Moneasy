@@ -54,9 +54,3 @@ class TransactionViewModel {
         self.transaction = transaction
     }
 }
-
-
-// MARK: - Service Methods
-extension TransactionViewModel {
-    
-}

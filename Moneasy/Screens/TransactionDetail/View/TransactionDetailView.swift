@@ -1,5 +1,5 @@
 //
-//  CreateTransactionView.swift
+//  TransactionDetailView.swift
 //  Moneasy
 //
 //  Created by Isnard Silva on 03/01/21.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class CreateTransactionView: UIView {
+final class TransactionDetailView: UIView {
     // MARK: - Views
     // Inputs
     private let inputsStackView: UIStackView = {
@@ -104,7 +104,7 @@ final class CreateTransactionView: UIView {
 
 
 // MARK: - View Codable
-extension CreateTransactionView: ViewCodable {
+extension TransactionDetailView: ViewCodable {
     func setupHierarchy() {
         addSubview(inputsStackView)
         inputsStackView.addArrangedSubview(nameTextField)
