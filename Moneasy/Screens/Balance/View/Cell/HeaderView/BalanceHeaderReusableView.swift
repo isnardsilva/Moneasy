@@ -29,7 +29,7 @@ final class BalanceHeaderReusableView: UICollectionReusableView {
         return stackView
     }()
     
-    let expenseValueView: BalanceValueLittleView = {
+    let revenueValueView: BalanceValueLittleView = {
         let balanceValueView = BalanceValueLittleView()
         balanceValueView.imageView.image = UIImage(systemName: "arrow.up.circle.fill")
         balanceValueView.imageView.tintColor = .green
@@ -38,7 +38,7 @@ final class BalanceHeaderReusableView: UICollectionReusableView {
         return balanceValueView
     }()
     
-    let revenueValueView: BalanceValueLittleView = {
+    let expenseValueView: BalanceValueLittleView = {
         let balanceValueView = BalanceValueLittleView()
         balanceValueView.imageView.image = UIImage(systemName: "arrow.down.circle.fill")
         balanceValueView.imageView.tintColor = .red
@@ -82,8 +82,8 @@ extension BalanceHeaderReusableView: ViewCodable {
         contentStackView.addArrangedSubview(balanceValueView)
         
         contentStackView.addArrangedSubview(balanceDetailItensStackView)
-        balanceDetailItensStackView.addArrangedSubview(expenseValueView)
         balanceDetailItensStackView.addArrangedSubview(revenueValueView)
+        balanceDetailItensStackView.addArrangedSubview(expenseValueView)
         
         
         addSubview(sectionTitleLabel)

@@ -162,6 +162,10 @@ extension BalanceViewController: UICollectionViewDataSource {
             fatalError("Error load header view as a BalanceHeaderReusableView")
         }
         
+        header.balanceValueView.valueLabel.text = String(format: "R$ %.02f", viewModel.balanceValue)
+        header.revenueValueView.valueLabel.text = String(format: "R$ %.02f", viewModel.revenueValue)
+        header.expenseValueView.valueLabel.text = String(format: "R$ %.02f", viewModel.expenseValue)
+        
         return header
     }
     

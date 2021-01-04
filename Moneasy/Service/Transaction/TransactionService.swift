@@ -41,6 +41,19 @@ final class TransactionService {
             }
         })
     }
+    
+    func fetchTransactionsOrderByDate(completionHandler: @escaping (Result<[Transaction], Error>) -> Void) {
+        fetchTransactions(completionHandler: { result in
+            switch result {
+            case .failure(let error):
+                completionHandler(.failure(error))
+                
+            case .success(var transactions):
+                transactions.sort(by: { $0.date > $1.date })
+                completionHandler(.success(transactions))
+            }
+        })
+    }
 }
 
 
