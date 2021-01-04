@@ -47,6 +47,12 @@ extension MainCoordinator {
         }
     }
     
+    func navigateToRegisterUser() {
+        let registerUserVC = RegisterUserViewController()
+        registerUserVC.coordinator = self
+        navigationController.pushViewController(registerUserVC, animated: true)
+    }
+    
     func navigateToBalance() {
         let balanceVC = BalanceViewController()
         balanceVC.coordinator = self

@@ -1,13 +1,13 @@
 //
-//  LoginView.swift
+//  RegisterUserView.swift
 //  Moneasy
 //
-//  Created by Isnard Silva on 02/01/21.
+//  Created by Isnard Silva on 04/01/21.
 //
 
 import UIKit
 
-final class LoginView: UIView {
+final class RegisterUserView: UIView {
     // MARK: - Views
     private let contentStackView: UIStackView = {
         let stackView = UIStackView()
@@ -47,28 +47,6 @@ final class LoginView: UIView {
     }()
     
     
-    // Buttons
-    private let buttonsStackView: UIStackView = {
-        let stackView = UIStackView()
-        stackView.axis = .vertical
-        stackView.spacing = 16
-        return stackView
-    }()
-    
-    
-    let signInWithEmailButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.setTitle("Entrar", for: .normal)
-        return button
-    }()
-    
-    let signUpButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.setTitle("Cadastrar-se", for: .normal)
-        return button
-    }()
-    
-    
     // MARK: - Initialization
     init() {
         super.init(frame: .zero)
@@ -82,17 +60,16 @@ final class LoginView: UIView {
 }
 
 // MARK: - Handle loading mode
-extension LoginView {
+extension RegisterUserView {
     func enableLoadingMode(_ enable: Bool) {
         emailTextField.isEnabled = !enable
         passwordTextField.isEnabled = !enable
-        signInWithEmailButton.isEnabled = !enable
-        signUpButton.isEnabled = !enable
     }
 }
 
-// MARK: - ViewCodable
-extension LoginView: ViewCodable {
+
+// MARK: - View Codable
+extension RegisterUserView: ViewCodable {
     func setupHierarchy() {
         addSubview(contentStackView)
         
@@ -100,11 +77,6 @@ extension LoginView: ViewCodable {
         contentStackView.addArrangedSubview(inputsStackView)
         inputsStackView.addArrangedSubview(emailTextField)
         inputsStackView.addArrangedSubview(passwordTextField)
-        
-        // Buttons
-        contentStackView.addArrangedSubview(buttonsStackView)
-        buttonsStackView.addArrangedSubview(signInWithEmailButton)
-        buttonsStackView.addArrangedSubview(signUpButton)
     }
     
     func setupConstraints() {
@@ -123,3 +95,4 @@ extension LoginView: ViewCodable {
         backgroundColor = .systemBackground
     }
 }
+

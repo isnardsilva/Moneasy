@@ -21,6 +21,11 @@
 		046CDC2325A0ABAB0032354D /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046CDC2225A0ABAB0032354D /* LoginViewModel.swift */; };
 		046CDC2725A0B0EA0032354D /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046CDC2625A0B0EA0032354D /* AlertManager.swift */; };
 		046CDC2C25A0B3870032354D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 046CDC2B25A0B3870032354D /* GoogleService-Info.plist */; };
+		046EF24225A3A2FE00B65726 /* RegisterUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046EF24125A3A2FE00B65726 /* RegisterUserViewController.swift */; };
+		046EF24925A3A42700B65726 /* RegisterUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046EF24825A3A42700B65726 /* RegisterUserView.swift */; };
+		046EF25025A3A58600B65726 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046EF24F25A3A58600B65726 /* UserService.swift */; };
+		046EF25625A3A60900B65726 /* UserServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046EF25525A3A60900B65726 /* UserServiceError.swift */; };
+		046EF25C25A3A71C00B65726 /* RegisterUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046EF25B25A3A71C00B65726 /* RegisterUserViewModel.swift */; };
 		04739C4A25A0B47C00FE200A /* LoginProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04739C4925A0B47C00FE200A /* LoginProtocol.swift */; };
 		04739C4D25A0B52700FE200A /* LoginWithEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04739C4C25A0B52700FE200A /* LoginWithEmail.swift */; };
 		04739C5625A0B5FC00FE200A /* LoginWithEmailError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04739C5525A0B5FC00FE200A /* LoginWithEmailError.swift */; };
@@ -78,6 +83,11 @@
 		046CDC2225A0ABAB0032354D /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		046CDC2625A0B0EA0032354D /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 		046CDC2B25A0B3870032354D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		046EF24125A3A2FE00B65726 /* RegisterUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserViewController.swift; sourceTree = "<group>"; };
+		046EF24825A3A42700B65726 /* RegisterUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserView.swift; sourceTree = "<group>"; };
+		046EF24F25A3A58600B65726 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		046EF25525A3A60900B65726 /* UserServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserServiceError.swift; sourceTree = "<group>"; };
+		046EF25B25A3A71C00B65726 /* RegisterUserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserViewModel.swift; sourceTree = "<group>"; };
 		04739C4925A0B47C00FE200A /* LoginProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProtocol.swift; sourceTree = "<group>"; };
 		04739C4C25A0B52700FE200A /* LoginWithEmail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWithEmail.swift; sourceTree = "<group>"; };
 		04739C5525A0B5FC00FE200A /* LoginWithEmailError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWithEmailError.swift; sourceTree = "<group>"; };
@@ -228,10 +238,45 @@
 			path = CustomComponents;
 			sourceTree = "<group>";
 		};
+		046EF23E25A3A2DC00B65726 /* RegisterUser */ = {
+			isa = PBXGroup;
+			children = (
+				046EF23F25A3A2EA00B65726 /* ViewModel */,
+				046EF24025A3A2EF00B65726 /* View */,
+			);
+			path = RegisterUser;
+			sourceTree = "<group>";
+		};
+		046EF23F25A3A2EA00B65726 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				046EF25B25A3A71C00B65726 /* RegisterUserViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		046EF24025A3A2EF00B65726 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				046EF24125A3A2FE00B65726 /* RegisterUserViewController.swift */,
+				046EF24825A3A42700B65726 /* RegisterUserView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		046EF24E25A3A57D00B65726 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				046EF24F25A3A58600B65726 /* UserService.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
 		04739C4725A0B45F00FE200A /* Service */ = {
 			isa = PBXGroup;
 			children = (
 				04739C4825A0B46F00FE200A /* Login */,
+				046EF24E25A3A57D00B65726 /* User */,
 				04739C6225A0F39700FE200A /* Authentication */,
 				04FA9F9825A256B000E82816 /* Transaction */,
 			);
@@ -251,6 +296,7 @@
 			isa = PBXGroup;
 			children = (
 				04739C5525A0B5FC00FE200A /* LoginWithEmailError.swift */,
+				046EF25525A3A60900B65726 /* UserServiceError.swift */,
 				04FA9F9F25A26E5C00E82816 /* AuthManagerError.swift */,
 				04FA9FA325A278F200E82816 /* TransactionServiceError.swift */,
 			);
@@ -333,6 +379,7 @@
 			children = (
 				04A2786825A0A4160098DA71 /* LaunchScreen */,
 				04A2786925A0A4230098DA71 /* Login */,
+				046EF23E25A3A2DC00B65726 /* RegisterUser */,
 				04739C5D25A0F2F800FE200A /* Balance */,
 				0424B95525A17FB8001818FE /* TransactionDetail */,
 			);
@@ -653,16 +700,21 @@
 				04FA9F9325A2557E00E82816 /* Transaction.swift in Sources */,
 				04FA9FB425A283EE00E82816 /* TransactionListViewModel.swift in Sources */,
 				04FA9FAF25A2824B00E82816 /* Date+ToString.swift in Sources */,
+				046EF24925A3A42700B65726 /* RegisterUserView.swift in Sources */,
 				04FA9FA025A26E5C00E82816 /* AuthManagerError.swift in Sources */,
 				04795E6425A2B570009779DC /* TransactionServiceObserver.swift in Sources */,
 				046CDC1E25A0A7350032354D /* ViewCodable.swift in Sources */,
 				049CFEBD25A0A4E100CBE271 /* MainCoordinator.swift in Sources */,
 				04795E6825A2B79A009779DC /* TransactionCell.swift in Sources */,
+				046EF25625A3A60900B65726 /* UserServiceError.swift in Sources */,
 				0424B95825A17FEC001818FE /* TransactionDetailViewController.swift in Sources */,
 				04739C4A25A0B47C00FE200A /* LoginProtocol.swift in Sources */,
 				0467AA5625A0A0A40076FCAE /* SceneDelegate.swift in Sources */,
+				046EF25C25A3A71C00B65726 /* RegisterUserViewModel.swift in Sources */,
+				046EF24225A3A2FE00B65726 /* RegisterUserViewController.swift in Sources */,
 				0404021525A2050100B47766 /* TransactionDetailView.swift in Sources */,
 				04EB3E2525A12B5F00DA78A0 /* BalanceView.swift in Sources */,
+				046EF25025A3A58600B65726 /* UserService.swift in Sources */,
 				04795E6D25A2BCDA009779DC /* TransactionViewModel.swift in Sources */,
 				046CDC2725A0B0EA0032354D /* AlertManager.swift in Sources */,
 				04FA9FA925A27F2A00E82816 /* String+ToDate.swift in Sources */,

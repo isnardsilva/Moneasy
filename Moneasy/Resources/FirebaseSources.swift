@@ -8,6 +8,7 @@
 import Foundation
 
 enum FirebaseAuthErrorCode: Int {
+    case emailAlreadyExists = 17007
     case invalidEmail = 17008
     case wrongPassword = 17009
     case userNotFound = 17011
